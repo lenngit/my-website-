@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intake Scorecard | Is Your Firm Leaking Cases? | TAC</title>
+  <meta name="description" content="10 questions. 5 minutes. Find out exactly where your estate planning or elder law firm's intake process is losing cases.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Intake Scorecard | Is Your Firm Leaking Cases? | TAC">
+  <meta property="og:description" content="10 questions. 5 minutes. Find out exactly where your estate planning or elder law firm's intake process is losing cases.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tacconsulting.co.za/scorecard/">
+  <meta property="og:site_name" content="The Acquisition Company">
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://tacconsulting.co.za/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Scorecard",
+        "item": "https://tacconsulting.co.za/scorecard/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-icon">
+        <img src="/assets/logo-dark.png" alt="TAC logo" onerror="this.style.opacity='0'">
+      </div>
+      <span class="nav-logo-wordmark">The<br>Acquisition<br>Company</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/framework/">Framework</a></li>
+      <li><a href="/solutions/medicaid-planning/">Solutions</a></li>
+      <li><a href="/scorecard/">Scorecard</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="https://calendly.com/leonard-tacconsulting/discoverycall" class="nav-cta">Book a Call</a><!-- CALENDLY LINK --></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="nav-mobile-menu">
+    <a href="/framework/">Framework</a>
+    <a href="/solutions/medicaid-planning/">Solutions</a>
+    <a href="/scorecard/">Scorecard</a>
+    <a href="/about/">About</a>
+    <a href="/blog/">Blog</a>
+    <a href="https://calendly.com/leonard-tacconsulting/discoverycall" class="nav-cta">Book a Discovery Call</a><!-- CALENDLY LINK -->
+  </div>
+
+  <!-- MAIN -->
+  <main class="scorecard-page">
+
+    <!-- Intro -->
+    <div class="scorecard-intro">
+      <p class="section-label">Intake Scorecard</p>
+      <h1 class="section-title">How well does your intake system convert leads into retained clients?</h1>
+      <p class="section-body">Answer each question based on how your firm operates today. Not how you intend it to work. Score 1 point for Yes, 0.5 for Partial, and 0 for No.</p>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="scorecard-progress">
+      <p class="progress-label" id="progressLabel">0 of 10 questions answered</p>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="scorecard-form">
+
+      <div class="scorecard-question">
+        <div class="sq-header">
+          <div class="sq-num">01</div>
+          <div class="sq-text">When a new lead submits your contact form, do they receive an automated acknowledgment within 5 minutes, any time of day?</div>
+        </div>
+        <div class="sq-options">
+          <button class="sq-btn" data-question="1" data-value="1">Yes</button>
+          <button class="sq-btn" data-question="1" data-value="0.5">Partial</button>
+          <button class="sq-btn" data-question="1" data-value="0">No</button>
+        </div>
+      </div>
+
+      <div class="scorecard-question">
+        <div class="sq-header">
+          <div class="sq-num">02</div>
+          <div class="sq-text">Do you have a page where a prospect can book a consultation without calling or emailing your office?</div>
+        </div>
+        <div class="sq-options">
+          <button class="sq-btn" data-question="2" data-value="1">Yes</button>
+          <button class="sq-btn" data-question="2" data-value="0.5">Partial</button>
+          <button class="sq-btn" data-question="2" data-value="0">No</button>
+        </div>
+      </div>
+
+      <div class="scorecard-question">
+        <div class="sq-header">
+          <div class="sq-num">03</div>
+          <div class="sq-text">Does your firm automatically send reminders (text or email) to prospects before their scheduled consultation?</div>
+        </div>
+        <div class="sq-options">
+          <button class="sq-btn" data-question="3" data-value="1">Yes</button>
+          <button class="sq-btn" data-question="3" data-value="0.5">Partial</button>
+          <button class="sq-btn" data-question="3" data-value="0">No</button>
+        </div>
+      </div>
+
+      <div class="scorecard-question">
+        <div class="sq-header">
+          <div class="sq-num">04</div>
+          <div class="sq-text">When a prospect does not respond, do you have a defined follow-up sequence that runs automatically?</div>
+        </div>
+        <div class="sq-options">
+          <button class="sq-btn" data-question="4" data-value="1">Yes</button>
+          <button class="sq-btn" data-question="4" data-value="0.5">Partial</button>
+          <button class="sq-btn" data-question="4" data-value="0">No</button>
+        </div>
+      </div>
+
+      <div class="scorecard-question">
+        <div class="sq-header">
+          <div class="sq-num">05</div>
+          <div class="sq-text">If someone attends a consultation but does not retain, do you have a structured process to re-engage them?</div>
+        </div>
+        <div class="sq-options">
+          <button class="sq-btn" data-question="5" data-value="1">Yes</button>
+          <button class="sq-btn" data-question="5" data-value="0.5">Partial</button>
+          <button class="sq-btn" data-question="5" data-value="0">No</button>
+        </div>
+      </div>
+
+      <div class="scorecard-question">
+        <div class="sq-header">
+          <div class="sq-num">06</div>
+          <div class="sq-text">Can you see at a glance exactly where each active lead sits in your intake process right now?</div>
+        </div>
+        <div class="sq-options">
+          <button class="sq-btn" data-question="6" data-value="1">Yes</button>
+          <button class="sq-btn" data-question="6" data-value="0.5">Partial</button>
+          <button class="sq-btn" data-question="6" data-value="0">No</button>
+        </div>
+      </div>
+
+      <div class="scorecard-question">
+        <div class="sq-header">
+          <div class="sq-num">07</div>
+          <div class="sq-text">Does your intake run the same way whether you are in court, on vacation, or short-staffed?</div>
+        </div>
+        <div class="sq-options">
+          <button class="sq-btn" data-question="7" data-value="1">Yes</button>
+          <button class="sq-btn" data-question="7" data-value="0.5">Partial</button>
+          <button class="sq-btn" data-question="7" data-value="0">No</button>
+        </div>
+      </div>
+
+      <div class="scorecard-question">
+        <div class="sq-header">
+          <div class="sq-num">08</div>
+          <div class="sq-text">Do you know what percentage of inbound leads actually schedule a consultation each month?</div>
+        </div>
+        <div class="sq-options">
+          <button class="sq-btn" data-question="8" data-value="1">Yes</button>
+          <button class="sq-btn" data-question="8" data-value="0.5">Partial</button>
+          <button class="sq-btn" data-question="8" data-value="0">No</button>
+        </div>
+      </div>
+
+      <div class="scorecard-question">
+        <div class="sq-header">
+          <div class="sq-num">09</div>
+          <div class="sq-text">Do you know what percentage of consultations convert into signed retainer agreements?</div>
+        </div>
+        <div class="sq-options">
+          <button class="sq-btn" data-question="9" data-value="1">Yes</button>
+          <button class="sq-btn" data-question="9" data-value="0.5">Partial</button>
+          <button class="sq-btn" data-question="9" data-value="0">No</button>
+        </div>
+      </div>
+
+      <div class="scorecard-question">
+        <div class="sq-header">
+          <div class="sq-num">10</div>
+          <div class="sq-text">Do you know how many retained clients your firm acquires per month, and what that number needs to be?</div>
+        </div>
+        <div class="sq-options">
+          <button class="sq-btn" data-question="10" data-value="1">Yes</button>
+          <button class="sq-btn" data-question="10" data-value="0.5">Partial</button>
+          <button class="sq-btn" data-question="10" data-value="0">No</button>
+        </div>
+      </div>
+
+    </div>
+    <!-- /scorecard-form -->
+
+    <!-- Result section -->
+    <div class="scorecard-result-section" id="scorecardResult">
+
+      <div class="result-header">
+        <span class="result-score-large" id="finalScore"></span>
+        <div>
+          <p style="font-size: 18px; color: var(--silver); font-weight: 300;">out of 10</p>
+        </div>
+      </div>
+
+      <div class="result-band-display" id="resultBand">
+        <div class="result-band-title" id="resultBandTitle"></div>
+        <p class="result-band-text" id="resultBandText"></p>
+      </div>
+
+      <div class="scorecard-actions">
+        <h3>Want to see exactly where your intake is losing cases?</h3>
+        <p>TAC conducts a free 30-point external audit for qualifying firms. You receive a written summary of every gap, ranked by revenue impact. No obligation.</p>
+        <a href="#" class="btn-primary">Request Your Free Audit</a><!-- CALENDLY LINK -->
+      </div>
+
+      <div class="action-items">
+        <p class="section-label" style="margin-top: 0; padding-top: 48px;">Three Actions You Can Take Today</p>
+
+        <div class="action-item">
+          <div class="action-num">01</div>
+          <div class="action-content">
+            <h4>Measure your current numbers</h4>
+            <p>Pull last month's leads, consultations booked, and retained clients. If you cannot find these numbers in under two minutes, that tells you something important.</p>
+          </div>
+        </div>
+
+        <div class="action-item">
+          <div class="action-num">02</div>
+          <div class="action-content">
+            <h4>Time your own response</h4>
+            <p>Submit a test inquiry through your website contact form right now. Note what happens, when it happens, and whether it would happen the same way on a Saturday evening. That is your lead's experience.</p>
+          </div>
+        </div>
+
+        <div class="action-item">
+          <div class="action-num">03</div>
+          <div class="action-content">
+            <h4>Map the gap from first contact to retainer</h4>
+            <p>Write every step a lead takes from initial inquiry to signed agreement. Count how many require someone in your office to manually act. That number is your exposure.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="margin-top: 48px;">
+        <a href="/framework/" class="btn-ghost">See how the TAC framework closes these gaps</a>
+      </div>
+
+    </div>
+    <!-- /scorecardResult -->
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-info">
+      <span class="footer-logo-text">The Acquisition Company</span>
+      <p>TAC Strategic Consulting (Pty) Ltd</p>
+      <p>tacconsulting.co.za</p>
+      <p>Serving estate planning and elder law firms across the United States.</p>
+      <p><a href="mailto:info@tacconsulting.co.za">info@tacconsulting.co.za</a></p>
+    </div>
+    <div class="footer-links">
+      <a href="/framework/">Framework</a>
+      <a href="/solutions/medicaid-planning/">Solutions</a>
+      <a href="/scorecard/">Intake Scorecard</a>
+      <a href="/about/">About</a>
+      <a href="/blog/">Blog</a>
+      <a href="https://calendly.com/leonard-tacconsulting/discoverycall">Book a Discovery Call</a><!-- CALENDLY LINK -->
+      <div class="footer-divider"></div>
+      <a href="mailto:leonard@tacconsulting.co.za">leonard@tacconsulting.co.za</a>
+      <a href="mailto:support@tacconsulting.co.za">support@tacconsulting.co.za</a>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script>
+  (function() {
+    var answers = {};
+    var totalQuestions = 10;
+
+    var buttons = document.querySelectorAll('.sq-btn');
+    var progressFill = document.getElementById('progressFill');
+    var progressLabel = document.getElementById('progressLabel');
+    var resultSection = document.getElementById('scorecardResult');
+    var finalScoreEl = document.getElementById('finalScore');
+    var resultBandTitle = document.getElementById('resultBandTitle');
+    var resultBandText = document.getElementById('resultBandText');
+
+    buttons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var qNum = this.getAttribute('data-question');
+        var val = parseFloat(this.getAttribute('data-value'));
+
+        // Clear siblings
+        var siblings = document.querySelectorAll('[data-question="' + qNum + '"]');
+        siblings.forEach(function(s) {
+          s.classList.remove('selected-yes', 'selected-partial', 'selected-no');
+        });
+
+        // Mark selected
+        if (val === 1) this.classList.add('selected-yes');
+        else if (val === 0.5) this.classList.add('selected-partial');
+        else this.classList.add('selected-no');
+
+        answers[qNum] = val;
+        updateProgress();
+      });
+    });
+
+    function updateProgress() {
+      var answered = Object.keys(answers).length;
+      var pct = (answered / totalQuestions) * 100;
+      progressFill.style.width = pct + '%';
+      progressLabel.textContent = answered + ' of ' + totalQuestions + ' questions answered';
+
+      if (answered === totalQuestions) {
+        showResult();
+      }
+    }
+
+    function showResult() {
+      var score = 0;
+      Object.values(answers).forEach(function(v) { score += v; });
+      score = Math.round(score * 10) / 10;
+
+      finalScoreEl.textContent = score;
+
+      var title, text;
+      if (score >= 8) {
+        title = 'Functioning Intake';
+        text = 'Solid fundamentals. Most leads are handled consistently and you have reasonable pipeline visibility. Gains come from tightening response times, reducing no-shows, and improving post-consult follow-up. The gap between current yield and potential is likely 10 to 20%.';
+      } else if (score >= 5) {
+        title = 'Moderate Gaps';
+        text = 'Some systems exist but key touchpoints are inconsistent or manual. Leads are slipping between first contact and consultation. Firms at this level see 30 to 40% of leads go cold before speaking to an attorney. A structured intake system produces measurable lift within 60 days.';
+      } else {
+        title = 'Critical Gaps';
+        text = 'Significant revenue is leaking every month through speed, friction, and silence. Not to better firms. If your firm retains 9 clients per month at $4,500 average case value, a 6-client improvement from better intake is $27,000 per month from the same leads you are already paying for.';
+      }
+
+      resultBandTitle.textContent = title;
+      resultBandText.textContent = text;
+      resultSection.classList.add('visible');
+      resultSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  })();
+  </script>
+
+</body>
+</html>
