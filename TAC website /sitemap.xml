@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+          <loc>https://www.tacconsulting.co.za/</loc>
+          <changefreq>monthly</changefreq>
+          <priority>1.0</priority>
+    </url>
+
+    <url>
+          <loc>https://www.tacconsulting.co.za/framework/</loc>
+          <changefreq>monthly</changefreq>
+          <priority>0.8</priority>
+    </url>
+
+    <url>
+          <loc>https://www.tacconsulting.co.za/solutions/medicaid-planning/</loc>
+          <changefreq>monthly</changefreq>
+          <priority>0.8</priority>
+    </url>
+
+    <url>
+          <loc>https://www.tacconsulting.co.za/scorecard/</loc>
+          <changefreq>monthly</changefreq>
+          <priority>0.8</priority>
+    </url>
+
+    <url>
+          <loc>https://www.tacconsulting.co.za/about/</loc>
+          <changefreq>monthly</changefreq>
+          <priority>0.7</priority>
+    </url>
+
+    <url>
+          <loc>https://www.tacconsulting.co.za/blog/</loc>
+          <changefreq>weekly</changefreq>
+          <priority>0.7</priority>
+    </url>
+
+    <url>
+          <loc>https://www.tacconsulting.co.za/blog/why-professional-intake-is-killing-your-consult-bookings/</loc>
+          <changefreq>monthly</changefreq>
+          <priority>0.6</priority>
+    </url>
+
+    <url>
+          <loc>https://www.tacconsulting.co.za/blog/you-are-not-losing-clients-to-better-lawyers/</loc>
+          <changefreq>monthly</changefreq>
+          <priority>0.6</priority>
+    </url>
+
+    <url>
+          <loc>https://www.tacconsulting.co.za/blog/the-312000-question/</loc>
+          <changefreq>monthly</changefreq>
+          <priority>0.6</priority>
+    </url>
+
+</urlset>
