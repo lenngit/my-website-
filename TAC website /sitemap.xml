@@ -1,58 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-    <url>
-          <loc>https://www.tacconsulting.co.za/</loc>
-          <changefreq>monthly</changefreq>
-          <priority>1.0</priority>
-    </url>
+        <url>
+                    <loc>https://www.theacquisitionco.com/</loc>
+                    <lastmod>2026-04-11</lastmod>
+                    <changefreq>monthly</changefreq>
+                    <priority>1.0</priority>
+        </url>
 
-    <url>
-          <loc>https://www.tacconsulting.co.za/framework/</loc>
-          <changefreq>monthly</changefreq>
-          <priority>0.8</priority>
-    </url>
+        <url>
+                    <loc>https://www.theacquisitionco.com/framework/</loc>
+                    <lastmod>2026-04-11</lastmod>
+                    <changefreq>monthly</changefreq>
+                    <priority>0.8</priority>
+        </url>
 
-    <url>
-          <loc>https://www.tacconsulting.co.za/solutions/medicaid-planning/</loc>
-          <changefreq>monthly</changefreq>
-          <priority>0.8</priority>
-    </url>
+        <url>
+                    <loc>https://www.theacquisitionco.com/solutions/medicaid-planning/</loc>
+                    <lastmod>2026-04-11</lastmod>
+                    <changefreq>monthly</changefreq>
+                    <priority>0.8</priority>
+        </url>
 
-    <url>
-          <loc>https://www.tacconsulting.co.za/scorecard/</loc>
-          <changefreq>monthly</changefreq>
-          <priority>0.8</priority>
-    </url>
+        <url>
+                    <loc>https://www.theacquisitionco.com/solutions/crisis-asset-protection/</loc>
+                    <lastmod>2026-04-11</lastmod>
+                    <changefreq>monthly</changefreq>
+                    <priority>0.8</priority>
+        </url>
 
-    <url>
-          <loc>https://www.tacconsulting.co.za/about/</loc>
-          <changefreq>monthly</changefreq>
-          <priority>0.7</priority>
-    </url>
+        <url>
+                    <loc>https://www.theacquisitionco.com/solutions/probate-estate/</loc>
+                    <lastmod>2026-04-11</lastmod>
+                    <changefreq>monthly</changefreq>
+                    <priority>0.8</priority>
+        </url>
 
-    <url>
-          <loc>https://www.tacconsulting.co.za/blog/</loc>
-          <changefreq>weekly</changefreq>
-          <priority>0.7</priority>
-    </url>
+        <url>
+                    <loc>https://www.theacquisitionco.com/scorecard/</loc>
+                    <lastmod>2026-04-11</lastmod>
+                    <changefreq>monthly</changefreq>
+                    <priority>0.8</priority>
+        </url>
 
-    <url>
-          <loc>https://www.tacconsulting.co.za/blog/why-professional-intake-is-killing-your-consult-bookings/</loc>
-          <changefreq>monthly</changefreq>
-          <priority>0.6</priority>
-    </url>
+        <url>
+                    <loc>https://www.theacquisitionco.com/about/</loc>
+                    <lastmod>2026-04-11</lastmod>
+                    <changefreq>monthly</changefreq>
+                    <priority>0.7</priority>
+        </url>
 
-    <url>
-          <loc>https://www.tacconsulting.co.za/blog/you-are-not-losing-clients-to-better-lawyers/</loc>
-          <changefreq>monthly</changefreq>
-          <priority>0.6</priority>
-    </url>
+        <url>
+                    <loc>https://www.theacquisitionco.com/blog/</loc>
+                    <lastmod>2026-04-11</lastmod>
+                    <changefreq>weekly</changefreq>
+                    <priority>0.7</priority>
+        </url>
 
-    <url>
-          <loc>https://www.tacconsulting.co.za/blog/the-312000-question/</loc>
-          <changefreq>monthly</changefreq>
-          <priority>0.6</priority>
-    </url>
+        <url>
+                    <loc>https://www.theacquisitionco.com/blog/why-professional-intake-is-killing-your-consult-bookings/</loc>
+                    <lastmod>2026-04-11</lastmod>
+                    <changefreq>monthly</changefreq>
+                    <priority>0.6</priority>
+        </url>
+
+        <url>
+                    <loc>https://www.theacquisitionco.com/blog/you-are-not-losing-clients-to-better-lawyers/</loc>
+                    <lastmod>2026-04-11</lastmod>
+                    <changefreq>monthly</changefreq>
+                    <priority>0.6</priority>
+        </url>
+
+        <url>
+                    <loc>https://www.theacquisitionco.com/blog/the-312000-question/</loc>
+                    <lastmod>2026-04-11</lastmod>
+                    <changefreq>monthly</changefreq>
+                    <priority>0.6</priority>
+        </url>
 
 </urlset>
