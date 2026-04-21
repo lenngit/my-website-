@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "theacquisitionco.com" }],
+      "destination": "https://www.theacquisitionco.com/:path*",
+      "permanent": true
+    }
+  ]
+}
