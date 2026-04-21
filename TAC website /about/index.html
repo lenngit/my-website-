@@ -61,6 +61,29 @@
     }
   ]
   </script>
+
+  <!-- LinkedIn Insight Tag -->
+  <!-- TO ACTIVATE: Replace YOUR_PARTNER_ID with your LinkedIn Partner ID -->
+  <!-- Find it in: LinkedIn Campaign Manager > Account Assets > Insight Tag -->
+  <script type="text/javascript">
+  _linkedin_partner_id = "YOUR_PARTNER_ID";
+  window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+  window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  (function(l) {
+    if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+    window.lintrk.q=[]}
+    var s = document.getElementsByTagName("script")[0];
+    var b = document.createElement("script");
+    b.type = "text/javascript"; b.async = true;
+    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+    s.parentNode.insertBefore(b, s);
+  })(window.lintrk);
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=YOUR_PARTNER_ID&fmt=gif" />
+  </noscript>
+  <!-- End LinkedIn Insight Tag -->
+
 </head>
 <body>
 
@@ -79,7 +102,7 @@
       <li><a href="/scorecard/">Scorecard</a></li>
       <li><a href="/about/">About</a></li>
       <li><a href="/blog/">Blog</a></li>
-      <li><a href="https://calendly.com/leonard-tacconsulting/discoverycall" class="nav-cta">Book a Call</a><!-- CALENDLY LINK --></li>
+      <li><a href="#" class="nav-cta">Request an Intake Audit</a><!-- CALENDLY LINK --></li>
     </ul>
     <button class="nav-hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -91,7 +114,7 @@
     <a href="/scorecard/">Scorecard</a>
     <a href="/about/">About</a>
     <a href="/blog/">Blog</a>
-    <a href="https://calendly.com/leonard-tacconsulting/discoverycall" class="nav-cta">Book a Discovery Call</a><!-- CALENDLY LINK -->
+    <a href="#" class="nav-cta">Request an Intake Audit</a><!-- CALENDLY LINK -->
   </div>
 
   <main style="background: var(--green-deep);">
@@ -179,7 +202,7 @@
     <section class="section section--mid" style="text-align: center;">
       <h2 class="section-title" style="text-align: center; max-width: 100%;">If any of this matches what you are experiencing, it is worth a conversation.</h2>
       <div style="display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; align-items: center; margin-top: 8px;">
-        <a href="https://calendly.com/leonard-tacconsulting/discoverycall" class="btn-primary">Book a Discovery Call</a><!-- CALENDLY LINK -->
+        <a href="#" class="btn-primary">Request an Intake Audit</a><!-- CALENDLY LINK -->
         <a href="/scorecard/" class="btn-ghost">Take the Intake Scorecard</a>
       </div>
     </section>
@@ -201,10 +224,12 @@
       <a href="/scorecard/">Intake Scorecard</a>
       <a href="/about/">About</a>
       <a href="/blog/">Blog</a>
-      <a href="https://calendly.com/leonard-tacconsulting/discoverycall">Book a Discovery Call</a><!-- CALENDLY LINK -->
+      <a href="#">Request an Intake Audit</a><!-- CALENDLY LINK -->
       <div class="footer-divider"></div>
       <a href="mailto:leonard@theacquisitionco.com">leonard@theacquisitionco.com</a>
       <a href="mailto:operations@theacquisitionco.com">operations@theacquisitionco.com</a>
+      <div class="footer-divider"></div>
+      <a href="/privacy/">Privacy Policy</a>
     </div>
   </footer>
 

@@ -34,6 +34,29 @@
     "description": "Out of every 100 people who contact your firm, how many become paying clients? If you cannot answer that, you have a tracking problem."
   }
   </script>
+
+  <!-- LinkedIn Insight Tag -->
+  <!-- TO ACTIVATE: Replace YOUR_PARTNER_ID with your LinkedIn Partner ID -->
+  <!-- Find it in: LinkedIn Campaign Manager > Account Assets > Insight Tag -->
+  <script type="text/javascript">
+  _linkedin_partner_id = "YOUR_PARTNER_ID";
+  window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+  window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  (function(l) {
+    if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+    window.lintrk.q=[]}
+    var s = document.getElementsByTagName("script")[0];
+    var b = document.createElement("script");
+    b.type = "text/javascript"; b.async = true;
+    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+    s.parentNode.insertBefore(b, s);
+  })(window.lintrk);
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=YOUR_PARTNER_ID&fmt=gif" />
+  </noscript>
+  <!-- End LinkedIn Insight Tag -->
+
 </head>
 <body>
 
@@ -51,7 +74,7 @@
     <li><a href="/scorecard/">Scorecard</a></li>
     <li><a href="/about/">About</a></li>
     <li><a href="/blog/">Blog</a></li>
-    <li><a href="https://calendly.com/leonard-tacconsulting/discoverycall" class="nav-cta">Book a Call</a><!-- CALENDLY LINK --></li>
+    <li><a href="#" class="nav-cta">Request an Intake Audit</a><!-- CALENDLY LINK --></li>
   </ul>
   <button class="nav-hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -63,7 +86,7 @@
   <a href="/scorecard/">Scorecard</a>
   <a href="/about/">About</a>
   <a href="/blog/">Blog</a>
-  <a href="https://calendly.com/leonard-tacconsulting/discoverycall" class="nav-cta">Book a Discovery Call</a><!-- CALENDLY LINK -->
+  <a href="#" class="nav-cta">Request an Intake Audit</a><!-- CALENDLY LINK -->
 </div>
 
 <main>
@@ -141,7 +164,7 @@
   <div class="post-cta">
     <h3>What are your three intake numbers?</h3>
     <p>Book a discovery call. We will work through your current funnel, identify the gaps, and give you a clear picture of what improved tracking would produce for your firm.</p>
-    <a href="https://calendly.com/leonard-tacconsulting/discoverycall" class="btn-primary">Book a Discovery Call</a><!-- CALENDLY LINK -->
+    <a href="#" class="btn-primary">Request an Intake Audit</a><!-- CALENDLY LINK -->
   </div>
 </main>
 
@@ -159,10 +182,12 @@
     <a href="/scorecard/">Intake Scorecard</a>
     <a href="/about/">About</a>
     <a href="/blog/">Blog</a>
-    <a href="https://calendly.com/leonard-tacconsulting/discoverycall">Book a Discovery Call</a><!-- CALENDLY LINK -->
+    <a href="#">Request an Intake Audit</a><!-- CALENDLY LINK -->
     <div class="footer-divider"></div>
     <a href="mailto:leonard@theacquisitionco.com">leonard@theacquisitionco.com</a>
     <a href="mailto:operations@theacquisitionco.com">operations@theacquisitionco.com</a>
+      <div class="footer-divider"></div>
+      <a href="/privacy/">Privacy Policy</a>
   </div>
 </footer>
 

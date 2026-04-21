@@ -68,31 +68,29 @@
   // Inject modal HTML once
   var modalHTML = [
     '<div class="audit-modal-overlay" id="auditModal" role="dialog" aria-modal="true" aria-labelledby="auditModalTitle">',
-    '  <div class="audit-modal">',
+    '  <div class="audit-modal" id="auditModalBox">',
     '    <button class="audit-modal-close" id="auditModalClose" aria-label="Close">&times;</button>',
     '    <div class="audit-modal-label">No Obligation</div>',
     '    <h2 class="audit-modal-title" id="auditModalTitle">Request your free intake audit.</h2>',
-    '    <p class="audit-modal-sub">We will review your contact flow, scheduling process, and after-hours availability. You receive a written summary of every gap we find, ranked by revenue impact.</p>',
+    '    <p class="audit-modal-sub">Tell us your firm and website. We will run the audit before the call — you just pick a time on the next step.</p>',
     '    <form class="audit-modal-form" id="auditModalForm" novalidate>',
-    '      <div class="audit-field">',
-    '        <label for="auditName">Your Name</label>',
-    '        <input type="text" id="auditName" name="name" placeholder="Jane Smith" required>',
-    '      </div>',
     '      <div class="audit-field">',
     '        <label for="auditFirm">Firm Name</label>',
     '        <input type="text" id="auditFirm" name="firm" placeholder="Smith Elder Law" required>',
     '      </div>',
     '      <div class="audit-field">',
-    '        <label for="auditEmail">Email Address</label>',
-    '        <input type="email" id="auditEmail" name="email" placeholder="jane@smithelderlaw.com" required>',
+    '        <label for="auditWebsite">Firm Website</label>',
+    '        <input type="url" id="auditWebsite" name="website" placeholder="https://smithelderlaw.com" required>',
     '      </div>',
-    '      <button type="submit" class="btn-primary audit-modal-submit">Send Audit Request</button>',
+    '      <button type="submit" class="btn-primary audit-modal-submit">Next — Pick a Time</button>',
     '      <p class="audit-modal-note">Qualifying firms: estate planning or elder law practices with 2 to 10 attorneys and an active marketing spend.</p>',
     '    </form>',
     '    <div class="audit-modal-success" id="auditModalSuccess" style="display:none;">',
     '      <div class="audit-success-icon">&#10003;</div>',
-    '      <h3>Request received.</h3>',
-    '      <p>We will be in touch within one business day to confirm your audit and arrange a time.</p>',
+    '      <p class="audit-success-label">Details received.</p>',
+    '      <h3>Now pick a time for your audit walkthrough.</h3>',
+    '      <p class="audit-success-sub">Choose a 20-minute slot below. We will run the audit before the call and walk you through every finding live.</p>',
+    '      <div class="calendly-inline-widget" id="auditCalendlyEmbed" data-url="https://calendly.com/leonard-tac/audit-walkthrough?hide_event_type_details=1&hide_gdpr_banner=1"></div>',
     '    </div>',
     '  </div>',
     '</div>'
@@ -105,8 +103,21 @@
   var auditModalForm = document.getElementById('auditModalForm');
   var auditModalSuccess = document.getElementById('auditModalSuccess');
 
+  var auditModalBox = document.getElementById('auditModalBox');
+  var calendlyLoaded = false;
+
+  function loadCalendlyScript() {
+    if (calendlyLoaded) return;
+    var script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.head.appendChild(script);
+    calendlyLoaded = true;
+  }
+
   function openAuditModal() {
     auditModal.classList.add('open');
+    auditModalBox.classList.remove('audit-modal--wide');
     document.body.style.overflow = 'hidden';
     // Reset form state each open
     auditModalForm.style.display = '';
@@ -152,17 +163,16 @@
   auditModalForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    var name  = document.getElementById('auditName').value.trim();
-    var firm  = document.getElementById('auditFirm').value.trim();
-    var email = document.getElementById('auditEmail').value.trim();
+    var firm    = document.getElementById('auditFirm').value.trim();
+    var website = document.getElementById('auditWebsite').value.trim();
 
     // Basic validation
-    if (!name || !firm || !email) {
+    if (!firm || !website) {
       var missing = auditModalForm.querySelector('.audit-error');
       if (!missing) {
         var err = document.createElement('p');
         err.className = 'audit-error';
-        err.textContent = 'Please fill in all three fields.';
+        err.textContent = 'Please fill in both fields.';
         auditModalForm.insertBefore(err, auditModalForm.querySelector('.audit-modal-submit'));
       }
       return;
@@ -182,16 +192,21 @@
       method: 'POST',
       headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        name: name,
         firm: firm,
-        email: email,
-        _subject: 'Free Audit Request — ' + firm
+        website: website,
+        _subject: 'Intake Audit Request — ' + firm
       })
     })
     .then(function (response) {
       if (response.ok) {
         auditModalForm.style.display = 'none';
         auditModalSuccess.style.display = 'block';
+        // Expand modal to fit Calendly embed
+        auditModalBox.classList.add('audit-modal--wide');
+        // Load Calendly widget script (loads once, initialises the embed div)
+        loadCalendlyScript();
+        // Scroll modal to top so calendar is visible
+        auditModalBox.scrollTop = 0;
       } else {
         return response.json().then(function (data) { throw new Error(data.error || 'failed'); });
       }
