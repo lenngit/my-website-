@@ -1,0 +1,32 @@
+# The Acquisition Company (TAC)
+
+> The Acquisition Company is a specialist intake optimisation firm for estate planning and elder law practices. We audit, rebuild, and manage the full intake process so firms stop losing cases between first contact and booked consultation.
+
+TAC works exclusively with estate planning and elder law firms. The core problem we solve: most firms lose 30–40% of their leads inside the intake process itself — slow response times, missing follow-up sequences, no pipeline visibility — and have no way to measure it. TAC conducts a free 30-point intake audit, then builds and manages a complete intake system in 30 days.
+
+The founder is Leonard Tembo, who has audited 200+ estate planning and elder law firms and built TAC specifically around the intake gap. Qualifying firms have 2–10 attorneys and an active marketing spend.
+
+## Core Pages
+
+- [Homepage](https://theacquisitionco.com/): Overview of TAC, the intake problem, proof, a leakage calculator, and the free audit offer.
+- [The TAC Framework](https://theacquisitionco.com/framework/): A detailed breakdown of the five-component intake system TAC builds — 30-day build, ongoing management.
+- [Intake Scorecard](https://theacquisitionco.com/scorecard/): A 10-question self-assessment tool that shows estate planning and elder law firms where their intake is losing cases.
+- [About](https://theacquisitionco.com/about/): Background on Leonard Tembo and why TAC was built after seeing the same intake failures across 200+ audited firms.
+- [Free 30-Point Intake Audit](https://theacquisitionco.com/free-audit/): Standalone landing page for the free audit offer. No sales pitch. Firms get a written summary of every gap found.
+
+## Solutions
+
+- [Medicaid Planning Intake Systems](https://theacquisitionco.com/solutions/medicaid-planning/): Intake systems built for time-sensitive Medicaid leads that require immediate response and structured follow-up.
+- [Crisis Asset Protection Intake Systems](https://theacquisitionco.com/solutions/crisis-asset-protection/): Intake systems for crisis asset protection leads where speed and precision are critical.
+- [Probate and Estate Administration Intake Systems](https://theacquisitionco.com/solutions/probate-estate/): Intake systems for probate leads that arrive at a moment of loss and require professional, sensitive handling.
+
+## Blog
+
+- [The $312,000 Question Most Elder Law Firms Have Never Asked](https://theacquisitionco.com/blog/the-312000-question/): On conversion tracking — if you cannot answer what percentage of inquiries become paying clients, you have a tracking problem.
+- [Why Professional Intake Is Killing Your Consult Bookings](https://theacquisitionco.com/blog/why-professional-intake-is-killing-your-consult-bookings/): Why asking for asset inventories before trust is established causes abandonment, not thoroughness.
+- [You Are Not Losing Clients to Better Lawyers. You Are Losing Them to Faster Systems.](https://theacquisitionco.com/blog/you-are-not-losing-clients-to-better-lawyers/): Families in a Medicaid crisis book with the firm that responds first, not the best-credentialed one.
+
+## Contact
+
+- Email: info@theacquisitionco.com
+- Free audit booking: https://theacquisitionco.com/free-audit/
