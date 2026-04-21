@@ -2,31 +2,222 @@
 
 > The Acquisition Company is a specialist intake optimisation firm for estate planning and elder law practices. We audit, rebuild, and manage the full intake process so firms stop losing cases between first contact and booked consultation.
 
-TAC works exclusively with estate planning and elder law firms. The core problem we solve: most firms lose 30–40% of their leads inside the intake process itself — slow response times, missing follow-up sequences, no pipeline visibility — and have no way to measure it. TAC conducts a free 30-point intake audit, then builds and manages a complete intake system in 30 days.
+TAC works exclusively with estate planning and elder law firms across the United States. The core problem it solves: most firms lose 30 to 40 percent of their leads inside the intake process itself — through slow response times, missing follow-up sequences, no pipeline visibility, and friction-heavy contact forms — and have no way to measure it. TAC conducts a free 30-point intake audit, then builds and manages a complete intake system in 30 days.
 
-The founder is Leonard Tembo, who has audited 200+ estate planning and elder law firms and built TAC specifically around the intake gap. Qualifying firms have 2–10 attorneys and an active marketing spend.
+The founder is Leonard Tembo, operating under TAC Strategic Consulting (Pty) Ltd, incorporated in South Africa. He has conducted intake audits across 200+ estate planning and elder law firms and built TAC specifically around the intake gap that marketing agencies ignore. Qualifying firms have 2 to 10 attorneys and an active marketing spend.
 
-## Core Pages
+TAC is not a marketing agency. It does not run ads, manage SEO, or build brand awareness. It is not a software vendor. The platform TAC builds on is GoHighLevel, but the platform is not the product — the strategy, configuration, messaging, and ongoing management are the product.
 
-- [Homepage](https://theacquisitionco.com/): Overview of TAC, the intake problem, proof, a leakage calculator, and the free audit offer.
-- [The TAC Framework](https://theacquisitionco.com/framework/): A detailed breakdown of the five-component intake system TAC builds — 30-day build, ongoing management.
-- [Intake Scorecard](https://theacquisitionco.com/scorecard/): A 10-question self-assessment tool that shows estate planning and elder law firms where their intake is losing cases.
-- [About](https://theacquisitionco.com/about/): Background on Leonard Tembo and why TAC was built after seeing the same intake failures across 200+ audited firms.
-- [Free 30-Point Intake Audit](https://theacquisitionco.com/free-audit/): Standalone landing page for the free audit offer. No sales pitch. Firms get a written summary of every gap found.
+The main CTA across the site is "Request an Intake Audit" — a two-step modal that captures the firm name and website URL via Formspree, then displays an inline Calendly booking widget for a 20-minute audit walkthrough call.
+
+---
+
+## Homepage
+
+URL: https://theacquisitionco.com/
+
+The homepage opens with the headline "Speed is the highest form of empathy in Elder Law." and the sub-statement: "Most firms do not have a marketing problem. They have an intake problem. TAC builds the systems that convert the leads you already have into retained clients."
+
+Key stats displayed on the homepage:
+- 200+ elder law and estate planning firms audited
+- 30 seconds: lead response time after TAC system is live
+- 21-day automated follow-up sequence, zero staff required
+
+Sections on the homepage:
+
+1. Free Audit Offer — TAC offers a free 30-point external intake audit. The firm receives a written summary of every gap found, ranked by revenue impact. No sales pitch. Qualifying firms are estate planning or elder law practices with 2 to 10 attorneys and an active marketing spend.
+
+2. Proof Section — Data from auditing 200+ firms: average response time during business hours was 2 to 6 hours; less than 10% of firms could quote their conversion rate; 75% had no structured follow-up sequence; 60% running paid ads were routing traffic into a broken intake flow; less than 5% could confirm a consultation outside 9 to 5 without human intervention; 70% had heavy upfront forms requesting sensitive data before a preliminary call was scheduled.
+
+3. Comparison Table — "The Legacy Firm" vs "The TAC-Optimized Firm" across five dimensions: Availability (9 to 5 vs 24/7 automated response within 30 seconds), First Contact (voicemail vs instant acknowledgment and booking link), Follow-Up (one callback attempt vs 7-touchpoint automated sequence over 21 days), Pipeline Visibility (no tracking vs live dashboard), Result (30 to 40% of leads go cold vs more retained clients from same lead volume).
+
+4. Leakage Calculator — Interactive tool. Inputs: monthly leads, current consult booking rate (%), average case value ($). Outputs: current consults/retained clients/revenue vs TAC-optimized scenario, monthly and annual revenue leak. Default values: 40 leads, 50% booking rate, $4,500 case value. TAC model assumes 65% booking rate and 60% close rate.
+
+5. Framework Overview — Five components listed: Auto-Responder (30-second personalised text and email), Self-Scheduling (calendar-synced booking page), Follow-Up Sequence (7 touchpoints over 21 days), Pipeline Tracking (5-stage visual pipeline), Reporting Dashboard (response time, booking rate, show rate, retained-case conversion).
+
+6. Scorecard Teaser — Preview of 3 of the 10 scorecard questions and the three result bands: 8 to 10 (Functioning Intake), 5 to 7 (Moderate Gaps), 0 to 4 (Critical Gaps).
+
+7. About Strip — Pull quote: "Agencies optimize for leads. I optimize for retained cases. That is the difference." Brief founder intro with link to full About page.
+
+---
+
+## Framework Page
+
+URL: https://theacquisitionco.com/framework/
+
+Full documentation of the five-component TAC intake system. The page opens with: "Elder law leads are not browsing. They are at varying stages of urgency. Medicaid deadlines. Probate timelines. Family crises reaching a tipping point."
+
+Economics callout on the page: "A firm retaining 9 clients per month at $4,500 average case value generates $40,500 in monthly new client revenue. Improving that to 14 retained clients from the same lead volume generates $63,000. The difference is $22,500 per month. The TAC monthly retainer is $1,500. The math is straightforward."
+
+The five components in full:
+
+Component 01 — Auto-Responder: When a lead submits a contact form, they receive a personalised text message and email within 30 seconds. The message confirms the inquiry, sets expectations, and provides a direct booking link. This fires every time — 9am or 11pm, weekday or Saturday. Key outcome: the firm is always first to respond.
+
+Component 02 — Self-Scheduling: A clean, mobile-friendly booking page synced to the firm's live calendar. Leads pick a date and time, receive a confirmation, and get automated reminders 24 hours and 1 hour before their consultation. No receptionist required. No phone tag. Key outcome: consultations get booked without staff involvement.
+
+Component 03 — Follow-Up Sequence: 7-touchpoint sequence delivered over 21 days for leads who do not book immediately. Tone is warm and professional. The sequence is calibrated to the specific case type. It stops the moment a lead books or signs. Key outcome: cold leads re-engage on their own timeline.
+
+Component 04 — Pipeline Tracking: Every lead is placed into a 5-stage visual pipeline: Lead, Contacted, Consult Scheduled, Consult Completed, Retained. The firm can see exactly where each lead sits at any moment, and where drop-off is happening. Key outcome: the firm knows where cases are slipping in real time.
+
+Component 05 — Reporting Dashboard: Live view showing response time, consult booking rate, show rate, and retained-case conversion. Updated continuously. Reviewed monthly with TAC. Key outcome: for the first time, the firm has data to make decisions from.
+
+30-day build timeline:
+- Week 1: Account setup, branding configuration, pipeline build, integrations connected and tested.
+- Week 2: Response workflows, calendar integration, and follow-up sequences built. Messaging drafted and reviewed.
+- Week 3: End-to-end testing across all touchpoints. Messaging sign-off. Revisions completed.
+- Week 4: Staff training (90-minute live session), documentation handover, go-live.
+
+Ongoing management (monthly retainer covers): system monitoring and optimisation, monthly 30-minute performance review call, dashboard updates and reporting, sequence and automation refinements, priority support.
+
+Pricing:
+- Founding Rate (first 5 clients only, closes August 2026): $2,500 setup fee (one-time), $1,500/month retainer.
+- Standard Rate: $5,000 setup fee (one-time), $2,500/month retainer.
+
+Pricing note: "If the TAC system adds 3 to 5 additional retained clients per month at an average case value of $4,500, the monthly retainer represents less than 10% of that incremental revenue."
+
+---
+
+## Intake Scorecard
+
+URL: https://theacquisitionco.com/scorecard/
+
+A 10-question interactive self-assessment. Each question is answered Yes (1 point), Partial (0.5 points), or No (0 points). Results appear after all 10 questions are answered.
+
+The 10 questions:
+1. When a new lead submits your contact form, do they receive an automated acknowledgment within 5 minutes, any time of day?
+2. Do you have a page where a prospect can book a consultation without calling or emailing your office?
+3. Does your firm automatically send reminders (text or email) to prospects before their scheduled consultation?
+4. When a prospect does not respond, do you have a defined follow-up sequence that runs automatically?
+5. If someone attends a consultation but does not retain, do you have a structured process to re-engage them?
+6. Can you see at a glance exactly where each active lead sits in your intake process right now?
+7. Does your intake run the same way whether you are in court, on vacation, or short-staffed?
+8. Do you know what percentage of inbound leads actually schedule a consultation each month?
+9. Do you know what percentage of consultations convert into signed retainer agreements?
+10. Do you know how many retained clients your firm acquires per month, and what that number needs to be?
+
+Score bands:
+- 8 to 10 (Functioning Intake): Solid fundamentals. Most leads handled consistently. Gap between current yield and potential is likely 10 to 20%.
+- 5 to 7 (Moderate Gaps): Some systems exist but key touchpoints are inconsistent or manual. 30 to 40% of leads go cold before speaking to an attorney. Structured intake produces measurable lift within 60 days.
+- 0 to 4 (Critical Gaps): Significant revenue leaking every month. Example: a firm retaining 9 clients/month at $4,500 average case value — a 6-client improvement from better intake is $27,000/month from the same leads.
+
+Three actions the scorecard recommends:
+1. Measure your current numbers — pull last month's leads, consultations booked, and retained clients.
+2. Time your own response — submit a test inquiry through your website and note what happens, when, and whether it would happen the same way on a Saturday evening.
+3. Map the gap from first contact to retainer — write every step a lead takes and count how many require manual action from someone in the office.
+
+---
+
+## About
+
+URL: https://theacquisitionco.com/about/
+
+Opening: "I built TAC after seeing too many law firms spend on marketing, only to lose the case after the client already reached out."
+
+The page is structured around six sections:
+
+1. What the audits kept showing: Leads sitting for hours or days before anyone responded. Contact forms asking for asset inventories and Social Security numbers before trust was established. No structured follow-up after the first call. Receptionists as the entire intake system. No tracking from lead to consult to retained client. These were not small operations — firms with real marketing budgets routing $50 to $200 PPC traffic into a voicemail box.
+
+2. Why agencies ignore it: Staying top-of-funnel is easier to sell. Fixing intake means touching operations — getting into how calls are handled, how forms are structured, how follow-up actually happens. Most agencies will not go there. That is the reason TAC exists.
+
+3. The core insight: Law firms are built to deliver legal work, not to convert intent. Marketing brings in demand. Intake mishandles it. The firm blames marketing. The agency sells more ads. The cycle repeats. Pull quote: "Agencies optimize for leads. I optimize for retained cases. That is the difference."
+
+4. Why this niche: Three reasons. (a) The problem is universal — in 200+ audits, the same intake failures appeared in nearly every firm. (b) The emotional stakes of a slow response are higher here than in almost any other legal niche — Medicaid deadlines, probate timelines, family crises. (c) The case values make the math work — one or two additional retained clients per month more than covers TAC's cost.
+
+5. What TAC is not: Not a marketing agency. Does not run ads, manage SEO, or build brand awareness. Not a software vendor. Does not work with every firm — the right client has 2 to 10 attorneys, an existing marketing spend, and a conversion problem they may not have named yet.
+
+6. Founder: Leonard Tembo, Founder and Principal. TAC Strategic Consulting (Pty) Ltd, incorporated in South Africa, serving estate planning and elder law firms across the United States. Currently in founding client acquisition phase. First five clients work at the founding rate and participate in a 90-day case study documenting before-and-after numbers. Contact: leonard@theacquisitionco.com.
+
+---
+
+## Free 30-Point Intake Audit (Landing Page)
+
+URL: https://theacquisitionco.com/free-audit/
+
+Standalone landing page for LinkedIn traffic and direct ad campaigns. No navigation links — logo only. Designed as a distraction-free conversion page.
+
+The audit covers 30 checkpoints across three documented areas:
+1. First Response Speed and Follow-Up Sequence — Tests actual response time to a new inquiry during business hours, after hours, and weekends. Documents whether an automated acknowledgment exists, time to human contact, and whether a structured follow-up sequence runs for leads that don't book immediately.
+2. Ad-to-Intake Tracking and Attribution — Identifies whether conversion events are firing for paid advertising (Google LSA, PPC, Facebook, LinkedIn), whether leads can be traced to their source, and whether attribution gaps exist.
+3. Intake Form and Booking Flow Friction — Audits the path from first contact to confirmed appointment. Documents every point of friction and ranks each by drop-off impact.
+
+Trust stats: 200+ firms audited, 30-second response benchmark, no sales pitch promise.
+
+The audit is free. No credit card, no retainer, no obligation. The firm receives a written summary of every gap found. If there is a fit for ongoing work, it is discussed separately after the data is seen. Qualifying firms: estate planning or elder law practices with 2 to 10 attorneys and an active marketing spend.
+
+FAQ on the page:
+- Is this really free? Yes. No credit card, no retainer, no obligation.
+- How long does it take? The call is 20 minutes. Written summary delivered within 24 hours.
+- What happens after the audit? You receive the report. No follow-up pitch. If you want help fixing what is found, that conversation can happen. If not, you keep the report.
+- Who qualifies? Estate planning and elder law practices with 2 to 10 attorneys and an active marketing spend.
+
+---
 
 ## Solutions
 
-- [Medicaid Planning Intake Systems](https://theacquisitionco.com/solutions/medicaid-planning/): Intake systems built for time-sensitive Medicaid leads that require immediate response and structured follow-up.
-- [Crisis Asset Protection Intake Systems](https://theacquisitionco.com/solutions/crisis-asset-protection/): Intake systems for crisis asset protection leads where speed and precision are critical.
-- [Probate and Estate Administration Intake Systems](https://theacquisitionco.com/solutions/probate-estate/): Intake systems for probate leads that arrive at a moment of loss and require professional, sensitive handling.
+### Medicaid Planning Intake Systems
+URL: https://theacquisitionco.com/solutions/medicaid-planning/
+
+Intake systems built for time-sensitive Medicaid leads. Medicaid leads are time-sensitive and emotionally charged — families dealing with Medicaid deadlines cannot wait hours for a callback. TAC builds intake systems that respond immediately and convert crisis inquiries into retained clients.
+
+### Crisis Asset Protection Intake Systems
+URL: https://theacquisitionco.com/solutions/crisis-asset-protection/
+
+Intake systems for crisis asset protection leads where speed and precision are critical. Crisis asset protection leads have days, not weeks, to act. The intake system must reflect that urgency with immediate response and structured follow-through.
+
+### Probate and Estate Administration Intake Systems
+URL: https://theacquisitionco.com/solutions/probate-estate/
+
+Intake systems for probate and estate administration firms. Probate leads come in at a moment of loss. TAC builds intake systems that are professional, structured, and sensitive to the emotional weight behind the inquiry.
+
+---
 
 ## Blog
 
-- [The $312,000 Question Most Elder Law Firms Have Never Asked](https://theacquisitionco.com/blog/the-312000-question/): On conversion tracking — if you cannot answer what percentage of inquiries become paying clients, you have a tracking problem.
-- [Why Professional Intake Is Killing Your Consult Bookings](https://theacquisitionco.com/blog/why-professional-intake-is-killing-your-consult-bookings/): Why asking for asset inventories before trust is established causes abandonment, not thoroughness.
-- [You Are Not Losing Clients to Better Lawyers. You Are Losing Them to Faster Systems.](https://theacquisitionco.com/blog/you-are-not-losing-clients-to-better-lawyers/): Families in a Medicaid crisis book with the firm that responds first, not the best-credentialed one.
+### The $312,000 Question Most Elder Law Firms Have Never Asked
+URL: https://theacquisitionco.com/blog/the-312000-question/
+Published: April 2026. Tag: Intake / Revenue.
 
-## Contact
+The article presents the full intake funnel as three numbers: lead volume, consultation booking rate, and consult-to-retainer rate. The argument: most firms have a rough sense of the third number, very few have accurate data on the second, almost none track the first with any precision.
 
-- Email: info@theacquisitionco.com
+Worked example: a firm receiving 100 leads/month at 50% booking rate and 45% close rate at $4,500 average case value produces ~$101,250/month. With a structured intake system (65% booking rate, 60% close rate), same 100 leads produces $175,500/month. Difference: $74,250/month or $891,000/year. The $312,000 figure is a conservative projection for a smaller firm receiving 50 to 60 leads/month.
+
+Why firms don't track this: no CRM configured for intake pipeline management, front desk not recording every inquiry, attorney not present for stages one and two of the funnel.
+
+What good tracking looks like: a five-stage pipeline (new inquiry, contacted, consultation scheduled, consultation completed, retained) where every lead is entered at stage one and stage is updated in real time.
+
+### Why Professional Intake Is Killing Your Consult Bookings
+URL: https://theacquisitionco.com/blog/why-professional-intake-is-killing-your-consult-bookings/
+Published: April 2026. Tag: Intake / Friction.
+
+The article identifies a common pattern: elder law contact forms that ask for asset inventories, property ownership, Social Security numbers, and detailed case information before any trust has been established. The prospect closes the tab. The firm never knows they were there.
+
+The argument: a person contacting an elder law firm for the first time has not decided to hire the firm — they have decided to find out if they should. Those are two different decisions. Asking for an asset inventory before the first decision conflates them.
+
+The two-stage model: Stage one (contact and trust) — the first-contact form should ask only four things: name, phone number, what they need help with in their own words, and when is a good time to talk. Goal is a confirmed phone call, not a completed file. Stage two (qualification and preparation) — after an initial call, the prospect expects to share information. A detailed intake questionnaire at that point is a natural next step, not an intrusion.
+
+Economics: a firm receiving 40 inquiries/month with 30% form abandonment loses 12 contacts/month. At $4,500 average case value and 50% close rate, each lost contact is ~$2,250. That is $27,000/month, $324,000/year — from a form designed to save time.
+
+### You Are Not Losing Clients to Better Lawyers. You Are Losing Them to Faster Systems.
+URL: https://theacquisitionco.com/blog/you-are-not-losing-clients-to-better-lawyers/
+Published: April 2026. Tag: Intake / Speed.
+
+The article challenges the common explanations for losing a client to a competitor: stronger reputation, higher Google ranking, lower price, more reviews. The argument is that in most competitive losses in elder law, the deciding factor was response time. The other firm answered first.
+
+How elder law clients actually make decisions: they are not comparison-shopping. They are in crisis — a parent diagnosed with Alzheimer's, a spouse in a nursing home, a family dispute over an estate. They contact three firms and work with the first one that responds with something useful.
+
+TAC audit data: average response time during business hours was 2 to 6 hours. Inquiries after 3pm frequently not answered until mid-morning the following day. A 16-hour gap is not slow — it is a forfeit.
+
+Economics: a firm receiving 40 leads/month at 50% booking rate retains 12 clients/month at $4,500 = $54,000/month. At 65% booking rate from faster response, 15 to 16 retained clients = $67,500 to $72,000/month. Difference: $13,500 to $18,000/month or $162,000 to $216,000/year. Same lead volume, same marketing spend, same attorneys.
+
+What fast actually looks like: a response within 30 seconds of form submission (not minutes — seconds), including acknowledgment, next steps, and a direct booking link. Operating any time of day or night without staff involvement. Followed by a deliberate 2 to 3 touchpoint sequence over 48 hours.
+
+---
+
+## Contact and Conversion
+
+- General email: info@theacquisitionco.com
+- Founder direct: leonard@theacquisitionco.com
+- Operations: operations@theacquisitionco.com
 - Free audit booking: https://theacquisitionco.com/free-audit/
+- Audit CTA (sitewide): "Request an Intake Audit" — triggers a two-step modal capturing firm name and website, then an inline Calendly booking embed for a 20-minute audit walkthrough call (https://calendly.com/leonard-tac/audit-walkthrough).
+- Privacy Policy: https://theacquisitionco.com/privacy/
