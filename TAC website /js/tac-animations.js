@@ -1,5 +1,5 @@
 /* =========================================================
-   TAC | tac-animations.js — v2
+   TAC | tac-animations.js — v2.2
    Premium motion layer for theacquisitionco.com.
    Cosmetic only. Fully additive. Graceful degradation.
    ========================================================= */
@@ -51,9 +51,9 @@
       '  filter: blur(4px);',
       '  will-change: transform, opacity, filter;',
       '  transition:',
-      '    opacity 900ms ' + EASE + ',',
-      '    transform 900ms ' + EASE + ',',
-      '    filter 900ms ' + EASE + ';',
+      '    opacity 1400ms ' + EASE + ',',
+      '    transform 1400ms ' + EASE + ',',
+      '    filter 1400ms ' + EASE + ';',
       '}',
       '.tac-l1.tac-revealed {',
       '  opacity: 1;',
@@ -67,8 +67,8 @@
       '  transform: translateY(40px) translateZ(0);',
       '  will-change: transform, opacity;',
       '  transition:',
-      '    opacity 800ms ' + EASE + ',',
-      '    transform 800ms ' + EASE + ';',
+      '    opacity 1200ms ' + EASE + ',',
+      '    transform 1200ms ' + EASE + ';',
       '}',
       '.tac-l2.tac-revealed {',
       '  opacity: 1;',
@@ -81,22 +81,22 @@
       '  transform: translateY(32px) translateZ(0);',
       '  will-change: transform, opacity;',
       '  transition:',
-      '    opacity 700ms ' + EASE + ',',
-      '    transform 700ms ' + EASE + ';',
+      '    opacity 1100ms ' + EASE + ',',
+      '    transform 1100ms ' + EASE + ';',
       '}',
       '.tac-l3.tac-revealed {',
       '  opacity: 1;',
       '  transform: translateY(0) translateZ(0);',
       '}',
 
-      /* ---------- CARD — deeper offset, longer duration ---------- */
+      /* ---------- CARD — deeper offset, long glide ---------- */
       '.tac-card {',
       '  opacity: 0;',
-      '  transform: translateY(32px) translateZ(0);',
+      '  transform: translateY(40px) translateZ(0);',
       '  will-change: transform, opacity;',
       '  transition:',
-      '    opacity 800ms ' + EASE + ',',
-      '    transform 800ms ' + EASE + ';',
+      '    opacity 1200ms ' + EASE + ',',
+      '    transform 1200ms ' + EASE + ';',
       '}',
       '.tac-card.tac-revealed {',
       '  opacity: 1;',
@@ -109,68 +109,37 @@
       '  transform: scale(0.97) translateZ(0);',
       '  will-change: transform, opacity;',
       '  transition:',
-      '    opacity 900ms ' + EASE + ',',
-      '    transform 900ms ' + EASE + ';',
+      '    opacity 1400ms ' + EASE + ',',
+      '    transform 1400ms ' + EASE + ';',
       '}',
       '.tac-scale.tac-revealed {',
       '  opacity: 1;',
       '  transform: scale(1) translateZ(0);',
       '}',
 
-      /* ---------- SLIDE FROM LEFT — banner heading ---------- */
-      '.tac-slide-l {',
-      '  opacity: 0;',
-      '  transform: translateX(-32px) translateZ(0);',
-      '  will-change: transform, opacity;',
-      '  transition:',
-      '    opacity 800ms ' + EASE + ',',
-      '    transform 800ms ' + EASE + ';',
-      '}',
-      '.tac-slide-l.tac-revealed {',
-      '  opacity: 1;',
-      '  transform: translateX(0) translateZ(0);',
-      '}',
-
-      /* ---------- SLIDE FROM RIGHT — banner body copy ---------- */
-      '.tac-slide-r {',
-      '  opacity: 0;',
-      '  transform: translateX(32px) translateZ(0);',
-      '  will-change: transform, opacity;',
-      '  transition:',
-      '    opacity 800ms ' + EASE + ',',
-      '    transform 800ms ' + EASE + ';',
-      '}',
-      '.tac-slide-r.tac-revealed {',
-      '  opacity: 1;',
-      '  transform: translateX(0) translateZ(0);',
-      '}',
-
       /* ---------- QUOTE SETTLE — letter-spacing breath ---------- */
       '.tac-quote {',
       '  opacity: 0;',
-      '  letter-spacing: 0.06em;',
+      '  letter-spacing: 0.04em;',
       '  will-change: opacity;',
       '  transition:',
-      '    opacity 900ms ' + EASE + ',',
-      '    letter-spacing 900ms ' + EASE + ';',
+      '    opacity 1400ms ' + EASE + ',',
+      '    letter-spacing 1400ms ' + EASE + ';',
       '}',
       '.tac-quote.tac-revealed {',
       '  opacity: 1;',
       '  letter-spacing: 0.01em;',
       '}',
 
-      /* ---------- HERO H1 WRAPPERS ---------- */
-      '.tac-hero-line {',
-      '  display: block;',
-      '}',
+      /* ---------- HERO H1 ---------- */
       '.tac-hero-inner {',
       '  display: block;',
       '  opacity: 0;',
       '  transform: translateY(48px) translateZ(0);',
       '  will-change: transform, opacity;',
       '  transition:',
-      '    opacity 850ms ' + EASE + ',',
-      '    transform 850ms ' + EASE + ';',
+      '    opacity 1600ms ' + EASE + ',',
+      '    transform 1600ms ' + EASE + ';',
       '}',
       '.tac-hero-inner.tac-revealed {',
       '  opacity: 1;',
@@ -180,17 +149,17 @@
       /* ---------- EMPATHY PULSE ---------- */
       '@keyframes tac-empathy {',
       '  0%   { opacity: 1; }',
-      '  45%  { opacity: 0.75; }',
+      '  45%  { opacity: 0.7; }',
       '  100% { opacity: 1; }',
       '}',
       '.tac-empathy-pulse {',
-      '  animation: tac-empathy 700ms ease-in-out 1;',
+      '  animation: tac-empathy 900ms ease-in-out 1;',
       '}',
 
       /* ---------- HERO DIVIDER — width draw ---------- */
       '.hero-divider {',
       '  width: 0 !important;',
-      '  transition: width 600ms ' + EASE + ';',
+      '  transition: width 1000ms ' + EASE + ';',
       '}',
       '.hero-divider.tac-revealed {',
       '  width: 48px !important;',
@@ -199,7 +168,7 @@
       /* ---------- PULL QUOTE RULE — width draw ---------- */
       '.pull-quote-rule {',
       '  width: 0 !important;',
-      '  transition: width 700ms ' + EASE + ';',
+      '  transition: width 1100ms ' + EASE + ';',
       '}',
       '.pull-quote-rule.tac-revealed {',
       '  width: 60px !important;',
@@ -258,8 +227,8 @@
       '  opacity: 0;',
       '  transform: translateY(-8px) translateZ(0);',
       '  transition:',
-      '    opacity 400ms ' + EASE + ',',
-      '    transform 400ms ' + EASE + ';',
+      '    opacity 500ms ' + EASE + ',',
+      '    transform 500ms ' + EASE + ';',
       '}',
       '.tac-nav-item.tac-revealed {',
       '  opacity: 1;',
@@ -336,7 +305,7 @@
       '  background: #C9A84C;',
       '  pointer-events: none;',
       '  z-index: 2;',
-      '  transition: height 900ms ' + EASE + ';',
+      '  transition: height 1600ms ' + EASE + ';',
       '}',
       '.comparison-grid.tac-revealed::after { height: 100%; }',
 
@@ -344,7 +313,7 @@
       '.tac-comp-row {',
       '  opacity: 0;',
       '  transform: translateY(16px) translateZ(0);',
-      '  transition: opacity 400ms ' + EASE + ', transform 400ms ' + EASE + ';',
+      '  transition: opacity 800ms ' + EASE + ', transform 800ms ' + EASE + ';',
       '}',
       '.tac-comp-row.tac-revealed {',
       '  opacity: 1;',
@@ -354,7 +323,7 @@
       /* Legacy column: muted until revealed */
       '.tac-comp-row .cell-legacy {',
       '  opacity: 0.5;',
-      '  transition: opacity 600ms ' + EASE + ';',
+      '  transition: opacity 900ms ' + EASE + ';',
       '}',
       '.tac-comp-row.tac-revealed .cell-legacy { opacity: 0.7; }',
 
@@ -362,7 +331,7 @@
       '.tac-comp-header {',
       '  opacity: 0;',
       '  transform: translateY(16px) translateZ(0);',
-      '  transition: opacity 500ms ' + EASE + ', transform 500ms ' + EASE + ';',
+      '  transition: opacity 900ms ' + EASE + ', transform 900ms ' + EASE + ';',
       '}',
       '.tac-comp-header.tac-revealed { opacity: 1; transform: translateY(0) translateZ(0); }',
 
@@ -371,7 +340,7 @@
       '  opacity: 0;',
       '  transform: translateY(24px) translateZ(0);',
       '  will-change: transform, opacity;',
-      '  transition: opacity 800ms ' + EASE + ', transform 800ms ' + EASE + ';',
+      '  transition: opacity 1300ms ' + EASE + ', transform 1300ms ' + EASE + ';',
       '  border-bottom: 1px solid transparent !important;',
       '}',
       '.tac-framework-step.tac-revealed {',
@@ -379,10 +348,10 @@
       '  transform: translateY(0) translateZ(0);',
       '}',
 
-      /* Step number fades in slightly before the row */
+      /* Step number fades in with the row */
       '.tac-framework-step .step-number {',
       '  opacity: 0;',
-      '  transition: opacity 500ms ' + EASE + ';',
+      '  transition: opacity 700ms ' + EASE + ';',
       '}',
       '.tac-framework-step.tac-revealed .step-number { opacity: 1; }',
 
@@ -395,7 +364,7 @@
       '  background: rgba(201,168,76,0.1);',
       '  transform: scaleX(0) translateZ(0);',
       '  transform-origin: left center;',
-      '  transition: transform 500ms ' + EASE + ';',
+      '  transition: transform 900ms ' + EASE + ';',
       '}',
       '.tac-framework-step.tac-revealed::after { transform: scaleX(1) translateZ(0); }',
 
@@ -449,7 +418,7 @@
       /* Output value crossfade wrapper */
       '.tac-val-inner {',
       '  display: inline;',
-      '  transition: opacity 120ms linear;',
+      '  transition: opacity 150ms linear;',
       '}',
 
       /* TAC-Optimised scenario label underline draw */
@@ -464,13 +433,13 @@
       '  width: 0;',
       '  height: 1px;',
       '  background: #C9A84C;',
-      '  transition: width 500ms ' + EASE + ';',
+      '  transition: width 800ms ' + EASE + ';',
       '}',
       '.scenario--tac .scenario-label.tac-revealed::after { width: 100%; }',
 
       /* ---------- CTA BANNER — brightness warmup + entry ---------- */
       '.cta-banner.tac-warm { filter: brightness(0.92); }',
-      '.cta-banner { transition: filter 1000ms ' + EASE + '; }',
+      '.cta-banner { transition: filter 1400ms ' + EASE + '; }',
       '.cta-banner.tac-revealed { filter: brightness(1.0); }',
 
       /* ---------- MODAL ANIMATION OVERRIDE ---------- */
@@ -525,13 +494,23 @@
     return _obs;
   }
 
-  /* Reveal a single element, honouring an optional delay */
+  /* Reveal a single element with an optional delay.
+     Always uses at least one rAF so the browser has committed
+     the initial hidden state before the transition fires. */
   function reveal(el, delay) {
     if (REDUCED) { el.classList.add('tac-revealed'); return; }
     if (delay) {
-      setTimeout(function () { el.classList.add('tac-revealed'); }, delay);
+      setTimeout(function () {
+        requestAnimationFrame(function () {
+          el.classList.add('tac-revealed');
+        });
+      }, delay);
     } else {
-      el.classList.add('tac-revealed');
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          el.classList.add('tac-revealed');
+        });
+      });
     }
   }
 
@@ -543,7 +522,6 @@
     else if (type === 'comp-table')    { handleCompTable(el); }
     else if (type === 'framework')     { handleFramework(el); }
     else if (type === 'pull-quote')    { handlePullQuote(el); }
-    else if (type === 'stat-row')      { handleStatRow(el); }
     else if (type === 'blog-cards')    { handleBlogCards(el); }
     else if (type === 'scorecard-qs')  { handleScorecardQs(el); }
     else if (type === 'cta-banner')    { handleCtaBanner(el); }
@@ -558,7 +536,7 @@
   ───────────────────────────────────────────────────── */
 
   function handleCardGroup(container) {
-    var stagger = parseInt(container.dataset.tacStagger || '180', 10);
+    var stagger = parseInt(container.dataset.tacStagger || '300', 10);
     Array.prototype.slice.call(container.querySelectorAll('.stat-card')).forEach(function (card, i) {
       card.classList.add('tac-card');
       reveal(card, i * stagger);
@@ -573,25 +551,20 @@
     var header = grid.querySelector('.comparison-header');
     if (header) {
       header.classList.add('tac-comp-header');
-      reveal(header, 100);
+      reveal(header, 150);
     }
 
     /* Rows stagger top-to-bottom */
     Array.prototype.slice.call(grid.querySelectorAll('.comparison-row')).forEach(function (row, i) {
       row.classList.add('tac-comp-row');
-      reveal(row, 200 + i * 70);
+      reveal(row, 300 + i * 120);
     });
   }
 
   function handleFramework(grid) {
     Array.prototype.slice.call(grid.querySelectorAll('.framework-step')).forEach(function (step, i) {
       step.classList.add('tac-framework-step');
-      /* Number fades in 120ms before the row */
-      var num = step.querySelector('.step-number');
-      if (num && !REDUCED) {
-        setTimeout(function () { num.style.opacity = '0'; }, 0);
-      }
-      reveal(step, i * 160);
+      reveal(step, i * 300);
     });
   }
 
@@ -599,44 +572,34 @@
     var quote = section.querySelector('.pull-quote');
     var rule  = section.querySelector('.pull-quote-rule');
     if (quote) { quote.classList.add('tac-quote'); reveal(quote, 0); }
-    if (rule)  { reveal(rule, 200); }
-  }
-
-  function handleStatRow(row) {
-    /* Stagger the three stat columns */
-    Array.prototype.slice.call(row.querySelectorAll('.hero-stat')).forEach(function (stat, i) {
-      stat.classList.add('tac-l3');
-      reveal(stat, i * 160);
-    });
-    /* Trigger countup */
-    initHeroCountup(row);
+    if (rule)  { reveal(rule, 300); }
   }
 
   function handleBlogCards(grid) {
     Array.prototype.slice.call(grid.querySelectorAll('.blog-card')).forEach(function (card, i) {
       card.classList.add('tac-card');
-      reveal(card, i * 160);
+      reveal(card, i * 280);
     });
   }
 
   function handleScorecardQs(list) {
     Array.prototype.slice.call(list.querySelectorAll('.scorecard-q')).forEach(function (q, i) {
       q.classList.add('tac-l3');
-      reveal(q, i * 160);
+      reveal(q, i * 250);
     });
   }
 
   function handleCtaBanner(banner) {
     banner.classList.remove('tac-warm');
-    banner.classList.add('tac-revealed'); /* triggers brightness warmup */
+    banner.classList.add('tac-revealed');
 
     var h2   = banner.querySelector('h2');
     var body = banner.querySelector('p');
     var btn  = banner.querySelector('.btn-dark');
 
-    if (h2)   { h2.classList.add('tac-slide-l');  reveal(h2, 0); }
-    if (body) { body.classList.add('tac-slide-r'); reveal(body, 200); }
-    if (btn)  { btn.classList.add('tac-l3');       reveal(btn, 350); }
+    if (h2)   { h2.classList.add('tac-l2');  reveal(h2, 0); }
+    if (body) { body.classList.add('tac-l2'); reveal(body, 300); }
+    if (btn)  { btn.classList.add('tac-l3');  reveal(btn, 500); }
   }
 
   /* ─────────────────────────────────────────────────────
@@ -653,6 +616,8 @@
   /* ─────────────────────────────────────────────────────
      PREPARE SCROLL ELEMENTS
      Adds initial animation classes + registers observer.
+     Note: hero stat row is NOT observed here — it is
+     triggered from initHeroSequence after the headline.
   ───────────────────────────────────────────────────── */
   function prepareScrollElements() {
     var obs = getObserver();
@@ -692,13 +657,13 @@
       '.framework-section .section-body, ' +
       '.scorecard-teaser .section-body, ' +
       '.about-body, .about-quote',
-      'tac-l2', 160
+      'tac-l2', 200
     );
 
     /* ── Layer 3: CTAs below body copy ── */
-    watch('.audit-offer .btn-primary', 'tac-l3', 240);
-    watch('.proof-section .btn-ghost', 'tac-l3', 200);
-    watch('.framework-section .btn-ghost', 'tac-l3', 200);
+    watch('.audit-offer .btn-primary', 'tac-l3', 320);
+    watch('.proof-section .btn-ghost', 'tac-l3', 280);
+    watch('.framework-section .btn-ghost', 'tac-l3', 280);
 
     /* ── Pull quote (handled as group) ── */
     var pullSection = document.querySelector('.pull-quote-section');
@@ -711,14 +676,14 @@
     var statGrid = document.querySelector('.stat-grid');
     if (statGrid) {
       statGrid.dataset.tacType    = 'card-group';
-      statGrid.dataset.tacStagger = '180';
+      statGrid.dataset.tacStagger = '300';
       obs.observe(statGrid);
     }
 
     /* ── Proof outro paragraphs with stagger ── */
     document.querySelectorAll('.proof-outro').forEach(function (el, i) {
       el.classList.add('tac-l2');
-      el.dataset.tacDelay = String(120 * i);
+      el.dataset.tacDelay = String(160 * i);
       obs.observe(el);
     });
 
@@ -740,11 +705,13 @@
       obs.observe(fwGrid);
     }
 
-    /* ── Hero stat row ── */
+    /* ── Hero stat row — pre-hide only. Reveal triggered from
+       initHeroSequence after the headline animates in.       ── */
     var statRow = document.querySelector('.hero-stat-row');
     if (statRow) {
-      statRow.dataset.tacType = 'stat-row';
-      obs.observe(statRow);
+      Array.prototype.slice.call(statRow.querySelectorAll('.hero-stat')).forEach(function (stat) {
+        stat.classList.add('tac-l3');
+      });
     }
 
     /* ── Scorecard questions ── */
@@ -757,7 +724,7 @@
     /* ── Scorecard result panels ── */
     document.querySelectorAll('.scorecard-result-preview .result-band').forEach(function (el, i) {
       el.classList.add('tac-l3');
-      el.dataset.tacDelay = String(160 + i * 160);
+      el.dataset.tacDelay = String(200 + i * 200);
       obs.observe(el);
     });
 
@@ -774,7 +741,7 @@
     if (aboutPhoto)   { aboutPhoto.classList.add('tac-scale'); obs.observe(aboutPhoto); }
     if (aboutContent) {
       aboutContent.classList.add('tac-l2');
-      aboutContent.dataset.tacDelay = '150';
+      aboutContent.dataset.tacDelay = '200';
       obs.observe(aboutContent);
     }
 
@@ -790,6 +757,8 @@
   /* ─────────────────────────────────────────────────────
      HERO SEQUENCE
      Runs on window.load to ensure fonts are ready.
+     Stat row reveal is coordinated from here so it
+     always appears after the headline, never before.
   ───────────────────────────────────────────────────── */
   function initHeroSequence() {
     function run() {
@@ -803,66 +772,86 @@
 
       if (!h1) return;
 
-      /* Immediately apply initial state — elements hidden by .tac-init
-         until this point; now we hand off to the transition system */
+      /* Apply initial animation classes */
       if (eyebrow) eyebrow.classList.add('tac-l1');
       if (sub)     sub.classList.add('tac-l2');
       if (buttons) buttons.classList.add('tac-l3');
 
-      /* Split H1 into three animated lines */
-      var inners = splitH1(h1);
+      /* H1 animates as a single unit — no line splitting.
+         This keeps "of empathy" on the same natural text line. */
+      h1.classList.add('tac-hero-inner');
 
       if (REDUCED) {
-        /* Show everything instantly */
         if (eyebrow) eyebrow.classList.add('tac-revealed');
-        inners.forEach(function (i) { i.classList.add('tac-revealed'); });
+        h1.classList.add('tac-revealed');
         if (divider) divider.classList.add('tac-revealed');
         if (sub)     sub.classList.add('tac-revealed');
         if (buttons) buttons.classList.add('tac-revealed');
+        /* Reveal stats immediately too */
+        var statRow = document.querySelector('.hero-stat-row');
+        if (statRow) {
+          Array.prototype.slice.call(statRow.querySelectorAll('.hero-stat')).forEach(function (s) {
+            s.classList.add('tac-revealed');
+          });
+        }
         return;
       }
 
-      /* ── Timeline ──
-         t=100  eyebrow  (L1, 900ms)
-         t=200  line 1   (850ms)
-         t=300  line 2   (850ms)  ← contains "empathy"
-         t=400  line 3   (850ms)
-         t=500  subtitle (L2, 800ms)
-         t=700  buttons  (L3, 700ms)
-         t=1000 divider  (600ms)
-         line2 settles → +300ms → empathy pulse (700ms)
+      /* ── Hero timeline ──
+         t=150   eyebrow   (L1,  1400ms)
+         t=400   H1        (1600ms) ← slowest, most premium
+         t=850   subtitle  (L2,  1200ms)
+         t=1150  buttons   (L3,  1100ms)
+         t=1600  divider   (1000ms draw)
+         t=2200  stat row  (L3,  1100ms, staggered)
+         H1 transitionend + 400ms → empathy pulse
       */
 
       setTimeout(function () {
-        if (eyebrow) eyebrow.classList.add('tac-revealed');
-      }, 100);
+        if (eyebrow) reveal(eyebrow, 0);
+      }, 150);
 
-      inners.forEach(function (inner, i) {
-        setTimeout(function () { inner.classList.add('tac-revealed'); }, 200 + i * 100);
-      });
+      setTimeout(function () {
+        reveal(h1, 0);
+      }, 400);
 
-      /* Empathy pulse — fires after line 2 (index 1) transition completes */
-      var line2 = inners[1] || inners[0];
-      if (line2) {
-        var pulsed = false;
-        line2.addEventListener('transitionend', function onEnd(e) {
-          if (e.propertyName !== 'transform' || pulsed) return;
-          pulsed = true;
-          line2.removeEventListener('transitionend', onEnd);
-          setTimeout(function () {
-            var em = h1.querySelector('em');
-            if (!em) return;
-            em.classList.add('tac-empathy-pulse');
-            em.addEventListener('animationend', function () {
-              em.classList.remove('tac-empathy-pulse');
-            }, { once: true });
-          }, 300);
+      setTimeout(function () {
+        if (sub) reveal(sub, 0);
+      }, 850);
+
+      setTimeout(function () {
+        if (buttons) reveal(buttons, 0);
+      }, 1150);
+
+      setTimeout(function () {
+        if (divider) reveal(divider, 0);
+      }, 1600);
+
+      /* Stat row: after headline is fully visible */
+      setTimeout(function () {
+        var statRow = document.querySelector('.hero-stat-row');
+        if (!statRow) return;
+        Array.prototype.slice.call(statRow.querySelectorAll('.hero-stat')).forEach(function (stat, i) {
+          reveal(stat, i * 220);
         });
-      }
+        initHeroCountup(statRow);
+      }, 2200);
 
-      setTimeout(function () { if (sub)     sub.classList.add('tac-revealed'); }, 500);
-      setTimeout(function () { if (buttons) buttons.classList.add('tac-revealed'); }, 700);
-      setTimeout(function () { if (divider) divider.classList.add('tac-revealed'); }, 1000);
+      /* Empathy pulse — fires after H1 transition completes */
+      var pulsed = false;
+      h1.addEventListener('transitionend', function onEnd(e) {
+        if (e.propertyName !== 'transform' || pulsed) return;
+        pulsed = true;
+        h1.removeEventListener('transitionend', onEnd);
+        setTimeout(function () {
+          var em = h1.querySelector('em');
+          if (!em) return;
+          em.classList.add('tac-empathy-pulse');
+          em.addEventListener('animationend', function () {
+            em.classList.remove('tac-empathy-pulse');
+          }, { once: true });
+        }, 400);
+      });
     }
 
     if (REDUCED) { run(); return; }
@@ -872,53 +861,6 @@
     } else {
       window.addEventListener('load', function () { setTimeout(run, 80); });
     }
-  }
-
-  /* Split H1 into three wrapper spans preserving the em element.
-     Line 1: text before em  |  Line 2: em  |  Line 3: text after em */
-  function splitH1(h1) {
-    var nodes    = Array.prototype.slice.call(h1.childNodes);
-    var before   = [];
-    var emNode   = null;
-    var after    = [];
-    var pastEm   = false;
-
-    nodes.forEach(function (node) {
-      if (node.nodeName === 'EM') {
-        emNode = node.cloneNode(true);
-        pastEm = true;
-      } else if (!pastEm) {
-        before.push(node.cloneNode(true));
-      } else {
-        after.push(node.cloneNode(true));
-      }
-    });
-
-    /* No em found — treat entire h1 as one line */
-    if (!emNode) {
-      h1.classList.add('tac-hero-inner');
-      return [h1];
-    }
-
-    h1.innerHTML = '';
-
-    function makeLine(contents) {
-      var line  = document.createElement('span');
-      var inner = document.createElement('span');
-      line.className  = 'tac-hero-line';
-      inner.className = 'tac-hero-inner';
-      contents.forEach(function (n) { inner.appendChild(n); });
-      line.appendChild(inner);
-      h1.appendChild(line);
-      return inner;
-    }
-
-    var inners = [];
-    if (before.length) inners.push(makeLine(before));
-    inners.push(makeLine([emNode]));
-    if (after.length)  inners.push(makeLine(after));
-
-    return inners;
   }
 
   /* ─────────────────────────────────────────────────────
@@ -934,7 +876,7 @@
       if (isNaN(target) || target === 0) return;
 
       var start    = null;
-      var duration = 1400;
+      var duration = 1600;
       var raf      = null;
 
       function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
@@ -964,7 +906,11 @@
     var items = Array.prototype.slice.call(document.querySelectorAll('.nav-links li'));
     items.forEach(function (li) { li.classList.add('tac-nav-item'); });
     items.forEach(function (li, i) {
-      setTimeout(function () { li.classList.add('tac-revealed'); }, 200 + i * 40);
+      setTimeout(function () {
+        requestAnimationFrame(function () {
+          li.classList.add('tac-revealed');
+        });
+      }, 200 + i * 50);
     });
   }
 
@@ -984,10 +930,9 @@
     if (REDUCED) return;
 
     /* ── Output crossfade ──
-       The inline calc script sets el.textContent = value directly.
-       We use MutationObserver to catch those writes, re-wrap the
-       content in .tac-val-inner, and fade the new value in.
-       A re-entry flag prevents infinite mutation loops. */
+       MutationObserver catches calc's textContent writes and fades
+       the new value in. updating flag stays true until the second
+       rAF so mutations from our own DOM changes are ignored. */
     var outputIds = [
       'currentConsults', 'currentRetained', 'currentRevenue',
       'tacConsults',     'tacRetained',     'tacRevenue',
@@ -1015,10 +960,8 @@
         if (updating) return;
         updating = true;
 
-        /* Calc has already set plain textContent — grab new value */
         var newVal = el.textContent;
 
-        /* Re-wrap: start hidden */
         var inner = document.createElement('span');
         inner.className   = 'tac-val-inner';
         inner.textContent = newVal;
@@ -1026,10 +969,8 @@
         el.textContent = '';
         el.appendChild(inner);
 
-        /* Fade in over two rAFs (ensures CSS transition triggers).
-           updating must stay true until AFTER the mutations from the
-           el.textContent/appendChild above have been delivered and
-           ignored — otherwise they retrigger this callback infinitely. */
+        /* updating stays true until after the mutations from the
+           lines above have been delivered and ignored, then resets. */
         requestAnimationFrame(function () {
           requestAnimationFrame(function () {
             inner.style.opacity = '1';
@@ -1040,8 +981,6 @@
 
       mo.observe(el, { childList: true, subtree: true, characterData: true });
     });
-
-    /* Trigger TAC column label underline after calc section enters view */
   }
 
   /* ─────────────────────────────────────────────────────
@@ -1061,7 +1000,6 @@
             dot.classList.add('tac-selected');
             dot.classList.remove('tac-deselected');
           } else {
-            /* Toggle off — clear all states */
             dots.forEach(function (d) { d.classList.remove('tac-selected', 'tac-deselected'); });
           }
         });
@@ -1071,12 +1009,8 @@
 
   /* ─────────────────────────────────────────────────────
      MODAL CLOSE ANIMATION PATCH
-     Intercepts close events (capture phase) to play a
-     300ms exit animation before main.js removes .open.
   ───────────────────────────────────────────────────── */
   function patchModalClose() {
-    /* The modal HTML is injected by main.js on DOMContentLoaded.
-       We wait a tick to ensure it exists. */
     setTimeout(function () {
       var overlay  = document.getElementById('auditModal');
       var closeBtn = document.getElementById('auditModalClose');
@@ -1097,7 +1031,6 @@
         }, 320);
       }
 
-      /* Intercept close button — capture phase fires before main.js bubble handler */
       if (closeBtn) {
         closeBtn.addEventListener('click', function (e) {
           if (!overlay.classList.contains('open')) return;
@@ -1106,7 +1039,6 @@
         }, true);
       }
 
-      /* Intercept backdrop click */
       overlay.addEventListener('click', function (e) {
         if (e.target !== overlay) return;
         if (!overlay.classList.contains('open')) return;
@@ -1114,7 +1046,6 @@
         animateClose();
       }, true);
 
-      /* Intercept Escape key */
       document.addEventListener('keydown', function (e) {
         if (e.key !== 'Escape') return;
         if (!overlay.classList.contains('open')) return;
@@ -1136,7 +1067,6 @@
     initCalculator();
     initScorecardDots();
     patchModalClose();
-    /* Hero sequence registered separately — fires on window.load */
     initHeroSequence();
   }
 
