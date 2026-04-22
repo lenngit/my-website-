@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Skills / Claude Code tooling
+.agents/
+.claude/
+.trae/
+skills-lock.json
