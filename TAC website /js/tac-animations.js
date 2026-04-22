@@ -1026,12 +1026,14 @@
         el.textContent = '';
         el.appendChild(inner);
 
-        updating = false;
-
-        /* Fade in over two rAFs (ensures CSS transition triggers) */
+        /* Fade in over two rAFs (ensures CSS transition triggers).
+           updating must stay true until AFTER the mutations from the
+           el.textContent/appendChild above have been delivered and
+           ignored — otherwise they retrigger this callback infinitely. */
         requestAnimationFrame(function () {
           requestAnimationFrame(function () {
             inner.style.opacity = '1';
+            updating = false;
           });
         });
       });
