@@ -70,8 +70,265 @@
   </noscript>
 
   <link rel="llms" type="text/plain" href="/llms.txt">
+
+  <!-- Print styles -->
+  <style>
+    /* ── Screen: print button ── */
+    .btn-print-page {
+      position: absolute;
+      top: 86px;
+      right: 48px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(210,212,217,0.45);
+      background: transparent;
+      border: 1px solid rgba(210,212,217,0.15);
+      padding: 8px 14px;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+    .btn-print-page:hover { color: rgba(210,212,217,0.85); border-color: rgba(210,212,217,0.35); }
+    .btn-print-page svg { width: 12px; height: 12px; flex-shrink: 0; }
+    .print-header, .print-footer { display: none; }
+
+    @media print {
+      @page { size: A4 portrait; margin: 20mm 20mm 16mm; }
+
+      nav, .nav-mobile-menu, footer, .cta-banner, .btn-print-page,
+      .section--deep > div[style*="flex"], .section--deep > div[style*="gap"] { display: none !important; }
+
+      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+
+      html, body {
+        background: #fff !important;
+        font-family: 'Inter', system-ui, sans-serif !important;
+        font-size: 10.5pt;
+        color: #1c1c1c !important;
+        line-height: 1.65;
+      }
+
+      .print-header {
+        display: block !important;
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        background: #fff;
+        padding-bottom: 6px;
+        border-bottom: 1.5px solid #1c1c1c;
+      }
+      .print-header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 6px 0 0;
+      }
+      .print-brand {
+        font-family: 'Inter', sans-serif;
+        font-size: 8px;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #1c1c1c;
+      }
+      .print-doc {
+        font-family: 'Inter', sans-serif;
+        font-size: 8px;
+        color: #888;
+        letter-spacing: 0.06em;
+      }
+
+      .print-footer {
+        display: flex !important;
+        position: fixed;
+        bottom: 0; left: 0; right: 0;
+        padding: 5px 0 0;
+        border-top: 1px solid #ddd;
+        background: #fff;
+        justify-content: space-between;
+        font-family: 'Inter', sans-serif;
+        font-size: 8px;
+        color: #888;
+      }
+
+      section, .section, .solutions-how, .framework-components,
+      .timeline-section, .pricing-section {
+        background: #fff !important;
+        padding: 24px 0 !important;
+      }
+
+      .hero, .hero--interior {
+        min-height: auto !important;
+        padding: 22px 0 20px !important;
+        background: #fff !important;
+        overflow: visible !important;
+        border-top: 2px solid #1c1c1c;
+        page-break-inside: avoid;
+      }
+      .hero::before, .hero::after { display: none !important; }
+
+      .hero-eyebrow {
+        font-family: 'Inter', sans-serif !important;
+        font-size: 8.5px !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.18em !important;
+        text-transform: uppercase !important;
+        color: #888 !important;
+        margin-bottom: 10px !important;
+      }
+      .hero-headline {
+        font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+        font-size: 22px !important;
+        font-weight: 500 !important;
+        color: #1c1c1c !important;
+        line-height: 1.2 !important;
+        letter-spacing: -0.01em !important;
+        margin-bottom: 12px !important;
+        max-width: 100% !important;
+      }
+      .hero-divider { display: none !important; }
+      .hero-sub {
+        font-size: 11px !important;
+        color: #444 !important;
+        line-height: 1.75 !important;
+        max-width: 100% !important;
+        margin-bottom: 10px !important;
+      }
+      .hero--interior > p[style] {
+        font-size: 10.5px !important;
+        color: #555 !important;
+        font-style: italic !important;
+        margin-bottom: 12px !important;
+      }
+
+      .economics-callout {
+        background: #f7f6f4 !important;
+        border: none !important;
+        border-left: 2px solid #1c1c1c !important;
+        padding: 12px 18px !important;
+        margin: 14px 0 0 !important;
+      }
+      .economics-callout p {
+        font-size: 10.5px !important;
+        color: #444 !important;
+        line-height: 1.72 !important;
+      }
+
+      .section-label {
+        font-family: 'Inter', sans-serif !important;
+        font-size: 8.5px !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.2em !important;
+        text-transform: uppercase !important;
+        color: #888 !important;
+        margin-bottom: 8px !important;
+      }
+      .section-title {
+        font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+        font-size: 17px !important;
+        font-weight: 500 !important;
+        color: #1c1c1c !important;
+        line-height: 1.2 !important;
+        letter-spacing: -0.01em !important;
+        margin-bottom: 10px !important;
+      }
+      .section-body {
+        font-size: 11px !important;
+        color: #444 !important;
+        line-height: 1.75 !important;
+        margin-bottom: 8px !important;
+      }
+      .solutions-how > p[style] {
+        font-size: 11px !important;
+        color: #444 !important;
+        line-height: 1.75 !important;
+        max-width: 100% !important;
+        margin-bottom: 16px !important;
+      }
+
+      .how-grid {
+        display: block !important;
+        background: none !important;
+        border: none !important;
+        margin-top: 10px !important;
+      }
+      .how-item {
+        background: none !important;
+        border: none !important;
+        border-bottom: 1px solid #ebebeb !important;
+        padding: 14px 0 !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      .how-item:first-child { border-top: 1px solid #ebebeb !important; }
+      .how-item-label {
+        font-family: 'Inter', sans-serif !important;
+        font-size: 8.5px !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.14em !important;
+        text-transform: uppercase !important;
+        color: #888 !important;
+        margin-bottom: 3px !important;
+      }
+      .how-item-title {
+        font-family: 'Playfair Display', Georgia, serif !important;
+        font-size: 13px !important;
+        font-weight: 500 !important;
+        color: #1c1c1c !important;
+        line-height: 1.25 !important;
+        margin-bottom: 5px !important;
+      }
+      .how-item-body {
+        font-size: 10.5px !important;
+        color: #444 !important;
+        line-height: 1.65 !important;
+      }
+
+      /* ── PAGINATION ── */
+      .print-break {
+        break-before: page !important;
+        page-break-before: always !important;
+      }
+      .print-remove { display: none !important; }
+
+      /* ── PAGE SPACING ── */
+      .hero--interior {
+        padding-top: 32px !important;
+        padding-bottom: 56px !important;
+        border-top: 2px solid #1c1c1c !important;
+        border-bottom: 1px solid #ddd !important;
+      }
+      .solutions-how:not(.print-break) {
+        padding: 40px 0 !important;
+      }
+      .solutions-how.print-break {
+        padding: 56px 0 40px !important;
+      }
+      .how-item { padding: 18px 0 !important; }
+      .how-grid { margin-top: 20px !important; }
+
+      /* ── Global ── */
+      p { color: #444 !important; }
+      h1, h2, h3, h4 { color: #1c1c1c !important; }
+      a { color: #1c1c1c !important; text-decoration: none !important; }
+      [style*="background: linear-gradient"],
+      [style*="background:linear-gradient"] { background: #fff !important; }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- PRINT HEADER (screen: hidden; print: fixed top of every page) -->
+  <div class="print-header">
+    <div class="print-header-inner">
+      <span class="print-brand">The Acquisition Company</span>
+      <span class="print-doc">Solutions &mdash; The Planning Client</span>
+    </div>
+  </div>
 
   <!-- NAVIGATION -->
   <nav>
@@ -110,6 +367,10 @@
     <div class="hero-divider"></div>
     <p class="hero-sub">Nothing has happened yet. They have simply decided it is time. A will. A revocable trust. Powers of attorney. A healthcare directive. The full estate plan they have been putting off. These leads are deliberate, and they are easy to lose, not to urgency but to friction, delay, and messaging calibrated for a completely different kind of client. TAC builds intake systems that serve this buyer on their own terms.</p>
     <p style="font-size:14px; font-weight:300; font-style:italic; color:var(--gold); margin-bottom:40px; letter-spacing:0.02em;">In planning intake, presence is the differentiator.</p>
+    <button class="btn-print-page" onclick="window.print()" aria-label="Print this page">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="3" y="1" width="10" height="5" rx="1"/><path d="M3 6H1v7h14V7H13"/><rect x="4" y="10" width="8" height="4" rx="0.5"/><circle cx="12.5" cy="8.5" r="0.75" fill="currentColor" stroke="none"/></svg>
+      Print this page
+    </button>
     <div class="economics-callout">
       <p>Wills, trusts, and advance planning matters average $3,000 to $8,000 or more per engagement. But the real value of a planning client extends well beyond the first matter. They return for amendments as circumstances change, they refer family members, and they often become the same firm's Medicaid or probate client years later. Your intake system is not just converting a consultation. It is opening a relationship that can span decades.</p>
     </div>
@@ -123,7 +384,7 @@
   </div>
 
   <!-- THE GAP -->
-  <div class="solutions-how">
+  <div class="solutions-how print-break">
     <p class="section-label">The Gap</p>
     <h2 class="section-title">Where firms lose these cases.</h2>
     <p style="font-size:16px; font-weight:300; color:var(--silver); max-width:680px; line-height:1.85; margin-bottom:0;">Planning clients rarely disengage because they changed their mind. They disengage because the firm's system was built for a different kind of client.</p>
@@ -157,7 +418,7 @@
   </div>
 
   <!-- THE CALIBRATION -->
-  <div class="solutions-how" style="background: var(--green-deep);">
+  <div class="solutions-how print-break" style="background: var(--green-deep);">
     <p class="section-label">The Calibration</p>
     <h2 class="section-title">How TAC configures the intake system for planning-ahead leads.</h2>
     <div class="how-grid" style="background: rgba(210,212,217,0.04); border-color: rgba(210,212,217,0.08);">
@@ -190,7 +451,7 @@
   </div>
 
   <!-- AFTER THE CONSULTATION -->
-  <div class="solutions-how">
+  <div class="solutions-how print-break">
     <p class="section-label">After the Consultation</p>
     <h2 class="section-title">How TAC configures the system for planning leads who consulted but did not retain.</h2>
     <div class="how-grid">
@@ -223,7 +484,7 @@
   </div>
 
   <!-- OTHER SOLUTIONS -->
-  <section class="section section--deep">
+  <section class="section section--deep print-remove">
     <p class="section-label">Other Solutions</p>
     <h3 style="font-size:16px; font-weight:400; color:var(--white); margin-bottom:28px; font-family:'Inter', sans-serif;">TAC also configures systems for:</h3>
     <div style="display:flex; flex-direction:column; align-items:flex-start; gap:16px;">
@@ -266,6 +527,12 @@
   </footer>
 
   <script src="/js/main.js"></script>
+
+  <!-- PRINT FOOTER (screen: hidden; print: fixed bottom of every page) -->
+  <div class="print-footer">
+    <span>theacquisitionco.com</span>
+    <span>Request your full 30-point intake audit &mdash; info@theacquisitionco.com</span>
+  </div>
 
 </body>
 </html>

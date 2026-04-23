@@ -100,8 +100,350 @@
   <!-- End LinkedIn Insight Tag -->
 
   <link rel="llms" type="text/plain" href="/llms.txt">
+
+  <!-- Print styles -->
+  <style>
+    /* ── Screen: print button ── */
+    .btn-print-page {
+      position: absolute;
+      top: 86px;
+      right: 48px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(210,212,217,0.45);
+      background: transparent;
+      border: 1px solid rgba(210,212,217,0.15);
+      padding: 8px 14px;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+    .btn-print-page:hover { color: rgba(210,212,217,0.85); border-color: rgba(210,212,217,0.35); }
+    .btn-print-page svg { width: 12px; height: 12px; flex-shrink: 0; }
+    .print-header, .print-footer { display: none; }
+
+    @media print {
+      @page { size: A4 portrait; margin: 20mm 20mm 16mm; }
+
+      nav, .nav-mobile-menu, footer, .cta-banner, .btn-print-page,
+      .section--mid, .section--deep:last-of-type { display: none !important; }
+
+      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+
+      html, body {
+        background: #fff !important;
+        font-family: 'Inter', system-ui, sans-serif !important;
+        font-size: 10.5pt;
+        color: #1c1c1c !important;
+        line-height: 1.65;
+      }
+
+      /* ── Fixed header ── */
+      .print-header {
+        display: block !important;
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        background: #fff;
+        padding-bottom: 6px;
+        border-bottom: 1.5px solid #1c1c1c;
+      }
+      .print-header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 6px 0 0;
+      }
+      .print-brand {
+        font-family: 'Inter', sans-serif;
+        font-size: 8px;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #1c1c1c;
+      }
+      .print-doc {
+        font-family: 'Inter', sans-serif;
+        font-size: 8px;
+        color: #888;
+        letter-spacing: 0.06em;
+      }
+
+      /* ── Fixed footer ── */
+      .print-footer {
+        display: flex !important;
+        position: fixed;
+        bottom: 0; left: 0; right: 0;
+        padding: 5px 0 0;
+        border-top: 1px solid #ddd;
+        background: #fff;
+        justify-content: space-between;
+        font-family: 'Inter', sans-serif;
+        font-size: 8px;
+        color: #888;
+      }
+
+      /* ── Strip dark backgrounds ── */
+      section, .section, .solutions-how, .framework-components,
+      .timeline-section, .pricing-section {
+        background: #fff !important;
+        padding: 24px 0 !important;
+      }
+
+      /* ── Intro section (replaces hero on framework page) ── */
+      .section--deep {
+        padding: 22px 0 20px !important;
+        background: #fff !important;
+        position: static !important;
+      }
+      .section--deep:first-of-type {
+        border-top: 2px solid #1c1c1c;
+        padding-top: 22px !important;
+      }
+
+      /* ── Economics callout ── */
+      .economics-callout {
+        background: #f7f6f4 !important;
+        border: none !important;
+        border-left: 2px solid #1c1c1c !important;
+        padding: 12px 18px !important;
+        margin: 14px 0 0 !important;
+      }
+      .economics-callout p {
+        font-size: 10.5px !important;
+        color: #444 !important;
+        line-height: 1.72 !important;
+      }
+
+      /* ── Section labels & titles ── */
+      .section-label {
+        font-family: 'Inter', sans-serif !important;
+        font-size: 8.5px !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.2em !important;
+        text-transform: uppercase !important;
+        color: #888 !important;
+        margin-bottom: 8px !important;
+      }
+      .section-title {
+        font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+        font-size: 17px !important;
+        font-weight: 500 !important;
+        color: #1c1c1c !important;
+        line-height: 1.2 !important;
+        letter-spacing: -0.01em !important;
+        margin-bottom: 10px !important;
+      }
+      .section-body {
+        font-size: 11px !important;
+        color: #444 !important;
+        line-height: 1.75 !important;
+        margin-bottom: 8px !important;
+      }
+
+      /* ── Framework components: cards → clean list ── */
+      .component-list { display: block !important; }
+      .component-item {
+        display: flex !important;
+        gap: 20px !important;
+        align-items: flex-start !important;
+        padding: 14px 0 !important;
+        border-bottom: 1px solid #ebebeb !important;
+        border-top: none !important;
+        background: #fff !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      .component-item:first-child { border-top: 1px solid #ebebeb !important; }
+      .component-number {
+        min-width: 22px !important;
+        padding-top: 2px !important;
+        flex-shrink: 0 !important;
+      }
+      .component-number span {
+        font-family: 'Playfair Display', serif !important;
+        font-size: 13px !important;
+        color: #888 !important;
+        display: block !important;
+      }
+      .component-content { flex: 1 !important; }
+      .component-title {
+        font-family: 'Inter', sans-serif !important;
+        font-size: 12.5px !important;
+        font-weight: 600 !important;
+        color: #1c1c1c !important;
+        margin-bottom: 5px !important;
+      }
+      .component-body {
+        font-size: 10.5px !important;
+        color: #444 !important;
+        line-height: 1.65 !important;
+        margin-bottom: 5px !important;
+      }
+      .component-outcome {
+        font-size: 8.5px !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.1em !important;
+        text-transform: uppercase !important;
+        color: #888 !important;
+      }
+
+      /* ── Timeline: cards → column-divided row ── */
+      .timeline {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 0 !important;
+        margin-top: 12px !important;
+      }
+      .timeline-week {
+        background: #fff !important;
+        border: none !important;
+        border-left: 1px solid #ddd !important;
+        padding: 10px 14px !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      .timeline-week:first-child {
+        border-left: none !important;
+        padding-left: 0 !important;
+      }
+      .week-label {
+        font-family: 'Inter', sans-serif !important;
+        font-size: 8.5px !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.14em !important;
+        text-transform: uppercase !important;
+        color: #888 !important;
+        margin-bottom: 4px !important;
+      }
+      .week-title {
+        font-family: 'Inter', sans-serif !important;
+        font-size: 11.5px !important;
+        font-weight: 600 !important;
+        color: #1c1c1c !important;
+        margin-bottom: 5px !important;
+      }
+      .week-body {
+        font-size: 10px !important;
+        color: #555 !important;
+        line-height: 1.6 !important;
+      }
+
+      /* ── Management list ── */
+      .management-list {
+        list-style: none !important;
+        padding: 0 !important;
+        margin-top: 8px !important;
+      }
+      .management-list li {
+        font-size: 11px !important;
+        color: #444 !important;
+        padding: 7px 0 7px 16px !important;
+        border-bottom: 1px solid #ebebeb !important;
+        position: relative !important;
+      }
+      .management-list li:first-child { border-top: 1px solid #ebebeb !important; }
+      .management-list li::before {
+        content: '\2014';
+        color: #888;
+        position: absolute;
+        left: 0;
+      }
+
+      /* ── Pricing: clean 2-col grid ── */
+      .pricing-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 16px !important;
+        margin-top: 12px !important;
+      }
+      .pricing-card {
+        background: #fff !important;
+        border: 1px solid #ddd !important;
+        padding: 18px !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      .pricing-card--founding { border-color: #1c1c1c !important; border-width: 1.5px !important; }
+      .pricing-badge {
+        font-family: 'Inter', sans-serif !important;
+        font-size: 8px !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.1em !important;
+        text-transform: uppercase !important;
+        color: #888 !important;
+        margin-bottom: 8px !important;
+      }
+      .pricing-name {
+        font-family: 'Playfair Display', serif !important;
+        font-size: 16px !important;
+        font-weight: 400 !important;
+        color: #1c1c1c !important;
+        margin-bottom: 12px !important;
+      }
+      .pricing-row {
+        display: flex !important;
+        justify-content: space-between !important;
+        padding: 7px 0 !important;
+        border-bottom: 1px solid #ebebeb !important;
+      }
+      .pricing-row-label { font-size: 10.5px !important; color: #555 !important; }
+      .pricing-row-value { font-size: 11px !important; font-weight: 600 !important; color: #1c1c1c !important; }
+      .pricing-note {
+        font-size: 10px !important;
+        color: #666 !important;
+        line-height: 1.65 !important;
+        margin-top: 14px !important;
+        font-style: italic !important;
+      }
+
+      /* ── PAGINATION ── */
+      .print-break {
+        break-before: page !important;
+        page-break-before: always !important;
+      }
+
+      /* ── PAGE SPACING ── */
+      /* Page 1: intro breathes */
+      .section--deep:first-of-type {
+        padding: 32px 0 56px !important;
+        border-top: 2px solid #1c1c1c !important;
+      }
+      /* Page 2: five components */
+      .framework-components.print-break { padding: 56px 0 40px !important; }
+      .component-item { padding: 18px 0 !important; }
+      .component-item.print-break { padding-top: 64px !important; }
+      /* Page 3: timeline + ongoing management */
+      .timeline-section.print-break { padding: 56px 0 32px !important; }
+      .timeline { margin-top: 20px !important; }
+      .timeline-section + .section--deep { padding: 40px 0 !important; }
+      .management-list li { padding: 9px 0 9px 24px !important; }
+      /* Page 4: pricing */
+      .pricing-section.print-break { padding: 56px 0 40px !important; }
+      .pricing-row { padding: 9px 0 !important; }
+
+      /* ── Global ── */
+      p { color: #444 !important; }
+      h1, h2, h3, h4 { color: #1c1c1c !important; }
+      a { color: #1c1c1c !important; text-decoration: none !important; }
+      [style*="background: #002112"],
+      [style*="background:#002112"] { background: #fff !important; }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- PRINT HEADER (screen: hidden; print: fixed top of every page) -->
+  <div class="print-header">
+    <div class="print-header-inner">
+      <span class="print-brand">The Acquisition Company</span>
+      <span class="print-doc">The TAC Framework</span>
+    </div>
+  </div>
 
   <!-- Navigation -->
   <nav>
@@ -134,7 +476,11 @@
   </div>
 
   <!-- 1. INTRO -->
-  <section class="section section--deep" style="padding-top: 140px;">
+  <section class="section section--deep" style="padding-top: 140px; position: relative;">
+    <button class="btn-print-page" onclick="window.print()" aria-label="Print this page">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="3" y="1" width="10" height="5" rx="1"/><path d="M3 6H1v7h14V7H13"/><rect x="4" y="10" width="8" height="4" rx="0.5"/><circle cx="12.5" cy="8.5" r="0.75" fill="currentColor" stroke="none"/></svg>
+      Print this page
+    </button>
     <div class="section-label">The Framework</div>
     <h1 class="section-title">A system built for the way elder law clients actually make decisions.</h1>
     <p class="section-body">Elder law leads are not browsing. They are at varying stages of urgency. Medicaid deadlines. Probate timelines. Family crises reaching a tipping point. The intake system has to match that reality, not the convenience of a 9-to-5 office.</p>
@@ -168,7 +514,7 @@
         </div>
       </div>
 
-      <div class="component-item">
+      <div class="component-item print-break">
         <div class="component-number"><span>03</span></div>
         <div class="component-content">
           <div class="component-title">Follow-Up Sequence</div>
@@ -199,7 +545,7 @@
   </div>
 
   <!-- 3. TIMELINE -->
-  <div class="timeline-section">
+  <div class="timeline-section print-break">
     <div class="section-label">The Timeline</div>
     <h2 class="section-title">Live in 30 days.</h2>
     <div class="timeline">
@@ -241,7 +587,7 @@
   </section>
 
   <!-- 5. PRICING -->
-  <div class="pricing-section">
+  <div class="pricing-section print-break">
     <div class="section-label">Investment</div>
     <h2 class="section-title">Transparent pricing. No surprises.</h2>
     <div class="pricing-grid">
@@ -318,5 +664,12 @@
 
   <!-- Shared JS -->
   <script src="/js/main.js"></script>
+
+  <!-- PRINT FOOTER (screen: hidden; print: fixed bottom of every page) -->
+  <div class="print-footer">
+    <span>theacquisitionco.com</span>
+    <span>Request your full 30-point intake audit &mdash; info@theacquisitionco.com</span>
+  </div>
+
 </body>
 </html>

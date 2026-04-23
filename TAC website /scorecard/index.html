@@ -259,6 +259,13 @@
         <p class="result-band-text" id="resultBandText"></p>
       </div>
 
+      <div style="margin-top: 32px; margin-bottom: 8px;">
+        <button onclick="downloadScorecardPDF()" style="display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--green-deep);background:var(--gold);border:none;padding:14px 28px;cursor:pointer;transition:opacity 0.2s;font-family:'Inter',sans-serif;" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 2v8M5 7l3 3 3-3"/><path d="M3 13h10"/></svg>
+          Download your report
+        </button>
+      </div>
+
       <div class="scorecard-actions">
         <h3>Want to see exactly where your intake is losing cases?</h3>
         <p>TAC conducts a free 30-point external audit for qualifying firms. You receive a written summary of every gap, ranked by revenue impact. No obligation.</p>
@@ -398,6 +405,24 @@
       resultSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   })();
+
+  function downloadScorecardPDF() {
+    var score = parseFloat(document.getElementById('finalScore').textContent) || 0;
+    var band  = score >= 8 ? 'high' : score >= 5 ? 'mid' : 'low';
+
+    var gaps = [], parts = [];
+    for (var qi = 1; qi <= 10; qi++) {
+      document.querySelectorAll('[data-question="' + qi + '"]').forEach(function(b) {
+        if (b.classList.contains('selected-no'))      gaps.push(qi);
+        else if (b.classList.contains('selected-partial')) parts.push(qi);
+      });
+    }
+
+    var url = '/report/?s=' + score + '&b=' + band;
+    if (gaps.length)  url += '&g=' + gaps.join(',');
+    if (parts.length) url += '&p=' + parts.join(',');
+    window.open(url, '_blank');
+  }
   </script>
 
 </body>

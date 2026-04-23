@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TAC Intake Scorecard Report</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── RESET ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-font-smoothing: antialiased; }
+
+    /* ── TOKENS ────────────────────────────────────────── */
+    :root {
+      --ink:        #1c1c1c;
+      --ink-2:      #3a3a3a;
+      --ink-3:      #555;
+      --muted:      #888;
+      --rule:       #ddd;
+      --rule-light: #ebebeb;
+      --tint:       #f7f6f4;
+      --page:       #fff;
+      --max-w:      680px;
+    }
+
+    /* ── SCREEN SHELL ──────────────────────────────────── */
+    body {
+      background: #e9e7e3;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-size: 14px;
+      color: var(--ink);
+      line-height: 1.65;
+    }
+
+    /* ── PRINT BAR (screen only) ───────────────────────── */
+    .print-bar {
+      max-width: calc(var(--max-w) + 144px);
+      margin: 0 auto;
+      padding: 20px 72px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .print-bar-label {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #888;
+    }
+
+    .print-btn {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--ink);
+      border: none;
+      padding: 11px 22px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: opacity 0.15s;
+    }
+    .print-btn:hover { opacity: 0.78; }
+    .print-btn svg { flex-shrink: 0; }
+
+    /* ── PAGE SHELL ────────────────────────────────────── */
+    .page {
+      background: var(--page);
+      max-width: calc(var(--max-w) + 144px);
+      margin: 24px auto 64px;
+      padding: 72px 72px 80px;
+      box-shadow: 0 4px 48px rgba(0,0,0,0.10), 0 1px 4px rgba(0,0,0,0.06);
+    }
+
+    /* ── MASTHEAD ──────────────────────────────────────── */
+    .masthead {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 32px;
+    }
+
+    .masthead-brand {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .masthead-meta {
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-align: right;
+      line-height: 1.7;
+    }
+
+    /* ── HEADER ────────────────────────────────────────── */
+    .report-header {
+      border-top: 2px solid var(--ink);
+      padding-top: 28px;
+      margin-bottom: 40px;
+    }
+
+    .report-eyebrow {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .report-title {
+      font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+      font-size: 32px;
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+    }
+
+    /* ── SCORE BLOCK ───────────────────────────────────── */
+    .score-block {
+      padding: 36px 0 0;
+      border-top: 1px solid var(--rule);
+    }
+
+    .score-row {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .score-numeral {
+      font-family: 'Playfair Display', serif;
+      font-size: 68px;
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+
+    .score-denom {
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--muted);
+      letter-spacing: -0.01em;
+    }
+
+    .score-band {
+      display: inline-block;
+      font-size: 9.5px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink);
+      border: 1px solid var(--ink);
+      padding: 4px 10px;
+      margin-bottom: 20px;
+    }
+
+    .score-disclaimer {
+      font-size: 11.5px;
+      color: var(--muted);
+      line-height: 1.7;
+      font-style: italic;
+      max-width: 520px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    /* ── SECTIONS ──────────────────────────────────────── */
+    .report-section {
+      margin-top: 44px;
+    }
+
+    .section-label {
+      font-size: 9.5px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .section-body {
+      font-size: 12.5px;
+      line-height: 1.8;
+      color: var(--ink-2);
+      max-width: 560px;
+    }
+
+    /* ── GAP LIST ──────────────────────────────────────── */
+    .gap-list {
+      list-style: none;
+    }
+
+    .gap-item {
+      display: flex;
+      gap: 18px;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--rule-light);
+      font-size: 12px;
+      color: var(--ink-2);
+      line-height: 1.55;
+      align-items: baseline;
+    }
+    .gap-item:first-child { border-top: 1px solid var(--rule-light); }
+
+    .gap-dash {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--muted);
+      min-width: 10px;
+      user-select: none;
+    }
+
+    .gap-partial-tag {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border: 1px solid var(--rule);
+      padding: 1px 5px;
+      margin-right: 8px;
+      white-space: nowrap;
+      position: relative;
+      top: -1px;
+    }
+
+    /* ── ACTION LIST ───────────────────────────────────── */
+    .action-list {
+      margin-top: 0;
+    }
+
+    .action-item {
+      display: flex;
+      gap: 28px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--rule-light);
+      align-items: flex-start;
+    }
+    .action-item:first-child { border-top: 1px solid var(--rule-light); }
+
+    .action-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--muted);
+      min-width: 22px;
+      padding-top: 1px;
+      letter-spacing: 0.01em;
+    }
+
+    .action-title {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 5px;
+      letter-spacing: 0.005em;
+    }
+
+    .action-body {
+      font-size: 12px;
+      color: var(--ink-3);
+      line-height: 1.75;
+    }
+
+    /* ── CTA BLOCK ─────────────────────────────────────── */
+    .cta-block {
+      margin-top: 52px;
+      padding: 28px 30px;
+      background: var(--tint);
+      border-left: 2px solid var(--ink);
+    }
+
+    .cta-block h3 {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 8px;
+      letter-spacing: 0.01em;
+    }
+
+    .cta-block p {
+      font-size: 12px;
+      color: var(--ink-3);
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+
+    .cta-link {
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 1px;
+    }
+
+    /* ── REPORT FOOTER ─────────────────────────────────── */
+    .report-footer {
+      margin-top: 64px;
+      padding-top: 20px;
+      border-top: 1px solid var(--rule);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .footer-name {
+      font-size: 10.5px;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 0.04em;
+      margin-bottom: 3px;
+    }
+
+    .footer-url {
+      font-size: 10px;
+      color: var(--muted);
+    }
+
+    .footer-right {
+      font-size: 10px;
+      color: var(--muted);
+      text-align: right;
+      line-height: 1.7;
+    }
+
+    /* ── @MEDIA PRINT ──────────────────────────────────── */
+    @page {
+      size: A4 portrait;
+      margin: 18mm 22mm 20mm;
+    }
+
+    @media print {
+      html  { background: none; font-size: 10.5pt; }
+      body  { background: none; }
+
+      .print-bar { display: none !important; }
+
+      .page {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        background: transparent;
+      }
+
+      .report-title   { font-size: 26pt; }
+      .score-numeral  { font-size: 54pt; }
+      .score-denom    { font-size: 16pt; }
+
+      .report-section { page-break-inside: avoid; }
+      .gap-item       { page-break-inside: avoid; }
+      .action-item    { page-break-inside: avoid; }
+      .cta-block      { page-break-inside: avoid; }
+      .report-footer  { page-break-inside: avoid; }
+
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Print / save bar — screen only -->
+  <div class="print-bar">
+    <span class="print-bar-label">TAC Intake Scorecard Report</span>
+    <button class="print-btn" onclick="window.print()">
+      <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" xmlns="http://www.w3.org/2000/svg"><path d="M8 2v8M5 7l3 3 3-3"/><path d="M3 13h10"/></svg>
+      Save as PDF
+    </button>
+  </div>
+
+  <!-- Document page -->
+  <div class="page">
+
+    <!-- Masthead -->
+    <div class="masthead">
+      <span class="masthead-brand">The Acquisition Company</span>
+      <div class="masthead-meta" id="mastheadMeta">
+        theacquisitionco.com<br>
+        <span id="reportDate"></span>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <div class="report-header">
+      <p class="report-eyebrow">Intake Analysis &nbsp;·&nbsp; Self-Assessment Scorecard</p>
+      <h1 class="report-title">Intake Scorecard Report</h1>
+    </div>
+
+    <!-- Score -->
+    <div class="score-block">
+      <div class="score-row">
+        <span class="score-numeral" id="displayScore">—</span>
+        <span class="score-denom">/ 10</span>
+      </div>
+      <div class="score-band" id="displayBand">—</div>
+      <p class="score-disclaimer">
+        This scorecard is a directional snapshot, not a full diagnosis. It identifies
+        systemic gaps in your intake process based on ten operational checkpoints. A
+        30-point external audit gives you the complete picture — every gap, ranked
+        by revenue impact.
+      </p>
+    </div>
+
+    <!-- What This Means -->
+    <div class="report-section">
+      <p class="section-label">What This Means</p>
+      <p class="section-body" id="sectionMeaning"></p>
+    </div>
+
+    <!-- Key Gaps -->
+    <div class="report-section" id="gapsSection">
+      <p class="section-label">Key Gaps Identified</p>
+      <ul class="gap-list" id="gapList"></ul>
+    </div>
+
+    <!-- Recommendations -->
+    <div class="report-section">
+      <p class="section-label">Broad Recommendations</p>
+      <p class="section-body" id="sectionRecs"></p>
+    </div>
+
+    <!-- What High-Performing Firms Do -->
+    <div class="report-section">
+      <p class="section-label">What High-Performing Firms Do</p>
+      <p class="section-body">
+        High-performing elder law firms respond within 60 seconds, allow self-scheduling
+        without phone contact, and run automated follow-up sequences calibrated to their
+        case type. They know their lead-to-consultation and consultation-to-retainer
+        conversion rates every month. They treat intake as a system, not a task.
+      </p>
+    </div>
+
+    <!-- Three Actions -->
+    <div class="report-section">
+      <p class="section-label">Three Actions You Can Take Today</p>
+      <div class="action-list">
+        <div class="action-item">
+          <div class="action-num">01</div>
+          <div>
+            <p class="action-title">Measure your current numbers</p>
+            <p class="action-body">Pull last month's leads, consultations booked, and retained clients. If you cannot locate these numbers in under two minutes, that tells you something important about the state of your pipeline visibility.</p>
+          </div>
+        </div>
+        <div class="action-item">
+          <div class="action-num">02</div>
+          <div>
+            <p class="action-title">Time your own response</p>
+            <p class="action-body">Submit a test inquiry through your website contact form. Note what happens, when it happens, and whether it would happen the same way on a Saturday evening. That is your lead's experience.</p>
+          </div>
+        </div>
+        <div class="action-item">
+          <div class="action-num">03</div>
+          <div>
+            <p class="action-title">Map the gap from first contact to retainer</p>
+            <p class="action-body">Write every step a lead takes from initial inquiry to signed agreement. Count how many require someone in your office to manually act. That number is your structural exposure.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-block">
+      <h3>Want to see exactly where your intake is losing cases?</h3>
+      <p>TAC conducts a free 30-point external audit for qualifying firms. You receive
+        a written summary of every gap, ranked by revenue impact. No obligation.
+        The audit is a diagnostic, not a sales call.</p>
+      <a class="cta-link" href="https://theacquisitionco.com/free-audit/">theacquisitionco.com/free-audit</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="report-footer">
+      <div>
+        <p class="footer-name">The Acquisition Company</p>
+        <p class="footer-url">theacquisitionco.com</p>
+      </div>
+      <div class="footer-right">
+        info@theacquisitionco.com<br>
+        Serving estate planning and elder law firms<br>across the United States.
+      </div>
+    </footer>
+
+  </div><!-- /page -->
+
+  <script>
+  (function () {
+    var params  = new URLSearchParams(window.location.search);
+    var score   = parseFloat(params.get('s'))  || 0;
+    var band    = params.get('b')  || 'low';
+    var gapsRaw = params.get('g')  || '';
+    var partsRaw= params.get('p')  || '';
+
+    var gapIdxs  = gapsRaw  ? gapsRaw.split(',').map(Number)  : [];
+    var partIdxs = partsRaw ? partsRaw.split(',').map(Number) : [];
+
+    /* ── Date ─────────────────────────────────────────── */
+    var d = new Date();
+    var months = ['January','February','March','April','May','June',
+                  'July','August','September','October','November','December'];
+    document.getElementById('reportDate').textContent =
+      months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+
+    /* ── Score display ────────────────────────────────── */
+    var scoreStr = score % 1 === 0 ? String(Math.round(score)) : score.toFixed(1);
+    document.getElementById('displayScore').textContent = scoreStr;
+
+    var bandTitles = { high: 'Functioning Intake', mid: 'Moderate Gaps', low: 'Critical Gaps' };
+    document.getElementById('displayBand').textContent = bandTitles[band] || 'Critical Gaps';
+
+    /* ── Meaning ──────────────────────────────────────── */
+    var meanings = {
+      high: 'Your intake fundamentals are solid. Most leads are handled consistently and you have reasonable pipeline visibility. The gap between your current yield and your potential is likely 10 to 20 percent. Gains come from tightening response times, reducing no-shows, and improving post-consult follow-up.',
+      mid:  'Some systems exist but key touchpoints are inconsistent or manual. Leads are slipping between first contact and consultation. Firms at this level see 30 to 40 percent of leads go cold before speaking to an attorney. A structured intake system produces measurable lift within 60 days.',
+      low:  'Significant revenue is leaking every month through slow response, friction, and silence — not to better firms. If your firm retains 9 clients per month at a $4,500 average case value, a 6-client improvement from a rebuilt intake system is $27,000 per month from the same leads you are already paying to acquire.'
+    };
+    document.getElementById('sectionMeaning').textContent = meanings[band] || meanings.low;
+
+    /* ── Recommendations ──────────────────────────────── */
+    var recs = {
+      high: 'Your system is performing well. The priority now is measurement and marginal optimisation. Review your no-show rate and post-consultation conversion closely. A 30-point external audit will identify the specific touchpoints where yield can still improve.',
+      mid:  'Focus first on automating the gaps identified above. A structured follow-up sequence and real-time pipeline visibility will produce the most immediate lift. A full external audit can prioritise changes by revenue impact so you address the highest-value gaps first.',
+      low:  'The priority is a structural rebuild of your intake process. Start with automated acknowledgment and a self-scheduling link — these two changes alone will measurably improve your consultation booking rate. A full 30-point audit will give you a sequenced action plan ranked by financial impact.'
+    };
+    document.getElementById('sectionRecs').textContent = recs[band] || recs.low;
+
+    /* ── Gaps ─────────────────────────────────────────── */
+    var labels = [
+      'Automated acknowledgment to new leads within 5 minutes, any time of day',
+      'Self-scheduling page for consultations, without calling or emailing the office',
+      'Automated consultation reminders by text or email before scheduled appointments',
+      'Defined automated follow-up sequence for non-responding prospects',
+      'Structured re-engagement process for unconverted consultations',
+      'Real-time pipeline visibility showing where each active lead sits',
+      'Intake runs consistently regardless of staff availability or attorney schedules',
+      'Lead-to-consultation conversion rate tracked monthly',
+      'Consultation-to-retainer conversion rate tracked monthly',
+      'Monthly retained client target known and monitored'
+    ];
+
+    var gapList = document.getElementById('gapList');
+    var allGaps = gapIdxs.concat(partIdxs.filter(function(i) {
+      return gapIdxs.indexOf(i) === -1;
+    })).sort(function(a,b){ return a - b; });
+
+    if (allGaps.length === 0) {
+      var li = document.createElement('li');
+      li.className = 'gap-item';
+      li.innerHTML = '<span class="gap-dash">&ndash;</span><span>No gaps identified. Your intake system is performing across all tracked dimensions.</span>';
+      gapList.appendChild(li);
+    } else {
+      allGaps.forEach(function(idx) {
+        var isPartial = partIdxs.indexOf(idx) !== -1 && gapIdxs.indexOf(idx) === -1;
+        var li = document.createElement('li');
+        li.className = 'gap-item';
+        var tag = isPartial ? '<span class="gap-partial-tag">Partial</span>' : '';
+        li.innerHTML = '<span class="gap-dash">&ndash;</span><span>' + tag + (labels[idx - 1] || 'Unknown gap') + '</span>';
+        gapList.appendChild(li);
+      });
+    }
+  })();
+  </script>
+
+</body>
+</html>
