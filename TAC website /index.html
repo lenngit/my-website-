@@ -1071,19 +1071,63 @@
         padding: 60px 24px;
       }
 
-      .comparison-row,
       .comparison-header {
-        grid-template-columns: 1fr;
+        display: none;
       }
 
-      .col-legacy,
-      .col-tac {
+      .comparison-row {
+        grid-template-columns: 1fr;
+        padding: 0;
+      }
+
+      .comparison-row::before {
+        content: attr(data-category);
+        display: block;
+        font-size: 10px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(210,212,217,0.5);
+        padding: 16px 20px 8px;
+        border-bottom: 1px solid rgba(201,168,76,0.08);
+      }
+
+      .cell-label {
+        display: none;
+      }
+
+      .cell-legacy,
+      .cell-tac {
+        padding: 12px 20px 14px;
+        font-size: 14px;
         border-right: none;
+        position: relative;
+        padding-left: 60px;
+      }
+
+      .cell-legacy::before,
+      .cell-tac::before {
+        position: absolute;
+        left: 20px;
+        top: 14px;
+        font-size: 9px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+
+      .cell-legacy::before {
+        content: 'LEGACY';
+        color: rgba(210,212,217,0.35);
+      }
+
+      .cell-tac::before {
+        content: 'TAC';
+        color: var(--gold);
       }
 
       .cell-legacy {
         border-right: none;
-        border-bottom: 1px solid rgba(201,168,76,0.1);
+        border-bottom: 1px solid rgba(201,168,76,0.08);
       }
 
       .calculator-section {
