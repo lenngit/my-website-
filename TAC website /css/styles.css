@@ -2350,10 +2350,26 @@ footer {
 }
 
 /* Calendly inline embed inside modal */
+.calendly-widget-wrap {
+  position: relative;
+  margin-top: 8px;
+}
+
 .calendly-inline-widget {
   min-width: 280px;
   height: 620px;
-  margin-top: 8px;
+}
+
+.calendly-badge-mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 130px;
+  height: 130px;
+  background: #fff;
+  z-index: 10;
+  pointer-events: none;
+  clip-path: polygon(100% 0, 100% 100%, 0 0);
 }
 
 @media (max-width: 600px) {

@@ -90,7 +90,7 @@
     '      <p class="audit-success-label">Details received.</p>',
     '      <h3>Now pick a time for your audit walkthrough.</h3>',
     '      <p class="audit-success-sub">Choose a 20-minute slot below. We will run the audit before the call and walk you through every finding live.</p>',
-    '      <div class="calendly-inline-widget" id="auditCalendlyEmbed" data-url="https://calendly.com/leonard-tac/audit-walkthrough?hide_event_type_details=1&hide_gdpr_banner=1"></div>',
+    '      <div class="calendly-widget-wrap"><div class="calendly-inline-widget" id="auditCalendlyEmbed" data-url="https://calendly.com/leonard-tac/audit-walkthrough?hide_event_type_details=1&hide_gdpr_banner=1"></div><div class="calendly-badge-mask"></div></div>',
     '    </div>',
     '  </div>',
     '</div>'
