@@ -1071,63 +1071,41 @@
         padding: 60px 24px;
       }
 
-      .comparison-header {
-        display: none;
-      }
-
-      .comparison-row {
-        grid-template-columns: 1fr;
-        padding: 0;
-      }
-
-      .comparison-row::before {
-        content: attr(data-category);
+      .comparison-grid {
         display: block;
-        font-size: 10px;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: rgba(210,212,217,0.5);
-        padding: 16px 20px 8px;
-        border-bottom: 1px solid rgba(201,168,76,0.08);
+      }
+
+      .comparison-header,
+      .comparison-row {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .col-legacy,
+      .col-tac {
+        padding: 12px 10px;
+        font-size: 9px;
+      }
+
+      .col-legacy {
+        border-right: 1px solid rgba(201,168,76,0.15);
       }
 
       .cell-label {
-        display: none;
+        display: block;
+        font-size: 9px;
+        margin-bottom: 6px;
       }
 
       .cell-legacy,
       .cell-tac {
-        padding: 12px 20px 14px;
-        font-size: 14px;
-        border-right: none;
-        position: relative;
-        padding-left: 60px;
-      }
-
-      .cell-legacy::before,
-      .cell-tac::before {
-        position: absolute;
-        left: 20px;
-        top: 14px;
-        font-size: 9px;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        font-weight: 400;
-      }
-
-      .cell-legacy::before {
-        content: 'LEGACY';
-        color: rgba(210,212,217,0.35);
-      }
-
-      .cell-tac::before {
-        content: 'TAC';
-        color: var(--gold);
+        padding: 14px 10px;
+        font-size: 12px;
+        line-height: 1.55;
       }
 
       .cell-legacy {
-        border-right: none;
-        border-bottom: 1px solid rgba(201,168,76,0.08);
+        border-right: 1px solid rgba(201,168,76,0.1);
       }
 
       .calculator-section {

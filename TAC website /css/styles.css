@@ -2079,34 +2079,7 @@ footer {
   /* Stat grid */
   .stat-grid { grid-template-columns: 1fr; }
 
-  /* Comparison — stack mobile */
-  .comparison-grid {
-    grid-template-columns: 1fr;
-  }
-  .comparison-col-header { display: none; }
-  .comparison-row {
-    display: block;
-    border-bottom: 1px solid var(--border-dim);
-  }
-  .comparison-row::before {
-    content: attr(data-category);
-    display: block;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: rgba(210,212,217,0.4);
-    padding: 20px 24px 0;
-    background: rgba(255,255,255,0.02);
-  }
-  .comparison-cell {
-    padding: 16px 24px 24px;
-    border-top: none;
-  }
-  .cell-tac {
-    border-left: none;
-    border-top: 2px solid rgba(201,168,76,0.3) !important;
-  }
+  /* Comparison — handled in index.html styles */
 
   /* Framework grid */
   .framework-grid {
